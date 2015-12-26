@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
 """
-Character generator for Mongoose Traveller. Any unspecified options will be
-generated randomly. Note that input parameters are case sensitive.
+Character generator for Iron Kingdoms. Note that input parameters are case sensitive.
 
 Usage: ikg (options)
 

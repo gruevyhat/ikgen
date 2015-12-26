@@ -5,23 +5,26 @@ A command line character generator for the Iron Kingdoms RPG.
 
 Usage: Character Generation
 ---------------------------
+Usage: ikg (options)
 
+Options:
+    -r, --race STR       IK race, e.g., 'Human (Cygnaran)' or 'Nyss'.
+    -a, --archetype STR  One of 'Gifted', 'Mighty', 'Skilled', or 'Intellectual'.
+    -c, --careers STR    A JSON-formatted list of careers, e.g., '["Solder", "Thief"]'.
+    -s, --stats STR      A JSON-formatted dict of attributes, e.g., '{"PER":8}'.
+    -l, --list           List possible races, classes, and archetypes.
+    -h --help
+    --version
 
+Example
+-------
+The following command will generate a Cygnaran Investigator/Arcanist (Illiminated) with a PER of 4. Note that specified attributes overwrite randomly generated ones, and may subvert race or career-provided bonuses.
 
-Usage: Dice Roller
-------------------
-
-The script can also be used to generate random numbers from simulated dice of any number of sides.
-
-    Usage: travgen roll DICE
-
-    Dice Roll Arguments:
-        DICE    Number and sides of dice in '#d#' format, e.g., 2d6.
+    ikg -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
 
 
 Installation
 ------------
-
 Standard Python package installation.
 
     > git clone http://github.org/gruevyhat/ikgen.git
