@@ -1,0 +1,59 @@
+#!/usr/bin/python
+
+"""
+Character generator for Mongoose Traveller. Any unspecified options will be
+generated randomly. Note that input parameters are case sensitive.
+
+Usage: ikg (options)
+
+Options:
+    -r, --race STR       IK race, e.g., 'Human (Cygnaran)' or 'Nyss'.
+    -a, --archetype STR  One of 'Gifted', 'Mighty', 'Skilled', or 'Intellectual'.
+    -c, --careers STR    A JSON-formatted list of careers, e.g., '["Solder", "Thief"]'.
+    -s, --stats STR      A JSON-formatted dict of attributes, e.g., '{"PER":8}'.
+    -l, --list           List possible races, classes, and archetypes.
+    -h --help
+    --version
+
+Example:
+    ikg -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
+
+"""
+
+__author__ = "GVH"
+__version__ = "0.0.1"
+
+
+import sys
+import json
+from docopt import docopt
+from ikgen.character import Character, CharData
+
+ARGS = ("race", "careers", "archetype", "stats")
+
+if __name__ == "__main__":
+
+    try:
+        args = {k.replace("-", ""): v
+                for k, v in docopt(__doc__, version=__version__).items()}
+
+        if args['list']:
+            cd = CharData()
+            print "CAREERS:", ", ".join(cd.careers.Career.tolist())
+            print
+            print "RACES:", ", ".join(cd.races.Race.tolist())
+            print
+            print "ARCHETYPES:", ", ".join(cd.archetypes.Archetype.tolist())
+            sys.exit()
+
+        args = {k: v for k, v in args.items() if k in ARGS}
+        args = {k: json.loads(v) if k in ('careers', 'stats') else v
+                for k, v in args.items() if v}
+
+        c = Character(**args)
+    except KeyboardInterrupt:
+        pass
+    except Exception as e:
+        print "Something unfortunate has happened. ('%s')" % e
+    else:
+        sys.stdout.write(c.summary()+"\n")

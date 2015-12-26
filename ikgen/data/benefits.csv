@@ -1,0 +1,42 @@
+Benefit,Archetype,Description
+Additional Study,Gifted,"Gain an additional spell from one of your career spell lists.  This benefit can be taken multiple times, but you cannot exceed twice your INT in spells known."
+Combat Caster,Gifted,"When you make a magic attack roll, gain an additional die.  Discard the lowest die of each roll."
+Fast Caster,Gifted,Gain one extra quick action each activation that can only be used to cast a spell.
+Feat: Dominator,Gifted,Spend a feat point during your turn to double your control area for one round.
+Feat: Powerful Caster,Gifted,"Spend a feat point when you cast a spell to increase the RNG by 2"".  Does not affect CTRL or SP spells."
+Feat: Quick Cast,Gifted,Spend a feat point to immediately cast one upkeep spell at the start of combat.  Do not pay the COST.
+Feat: Strength of Will,Gifted,"After a failed fatigue roll, spend a feat point to instead automatically succeed."
+Magic Sensitivity,Gifted,Automatically sense when another character casts a spell within 50' per point of ARC.  Focusers can sense focuses in same detection range.
+Rune Reader,Gifted,Identify any spell cast in line of sight.  Learn the type of magic cast and tradition of caster.
+Warding Circle,Gifted,Spend 15 minutes to create a warded circle.
+Battlefield Coordinator,Intellectual,"While in his CMD range, friendly characters do not suffer firing into melee penalties with ranged/magic and cannot hit friendly characters if they miss."
+Feat: Flawless Timing,Intellectual,"Spend a feat point and name an enemy.  Next time that enemy directly hits you, he misses instead."
+Feat: Prescient,Intellectual,"Spend a feat point to win initiative and take the first turn.  If two or more people use this, they make initiative rolls to see which goes first."
+Feat: Perfect Plot,Intellectual,Spend a feat point and character's following your plans gain an additional die on non-combat rolls for the day.
+Feat: Plan of Action,Intellectual,"At the start of combat, spend a feat point to grant +2 to initiative and +2 to attack rolls during the first round of combat."
+Feat: Quick Thinking,Intellectual,"Once per round, spend a feat point to make one attack or quick action at the start of another character's turn."
+Feat: Unconventional Warfare,Intellectual,Spend a feat point to turn the environment against the enemy.
+Genius,Intellectual,You gain boosted INT rolls.
+Hyper Perception,Intellectual,You gain boosted PER rolls.
+Photographic Memory,Intellectual,You have photographic memory.
+Beat Back,Mighty,"When you hit with a melee attack, you may push your target 1"" directly away and then advance up to 1""."
+Feat: Back Swing,Mighty,"Once per turn, you can spend a feat point to gain one additional melee attack."
+Feat: Bounding Leap,Mighty,"Once during each turn if you don't run or charge, spend a feat point to place yourself within 5"" of your current location."
+Feat: Counter Charge,Mighty,"When an enemy advances and ends movement within 6"" and in LOS, spend a feat point to charge."
+Feat: Invulnerable,Mighty,Spend a feat point to gain +3 ARM for one round.
+Feat: Revitalize,Mighty,Spend a feat point to regain a number of vitality points equal to your PHY.
+Feat: Shield Breaker,Mighty,Spend a feat point to destroy a shield if you hit with a melee attack.
+Feat: Vendetta,Mighty,Spend a feat point and name an enemy.  Gain boosted attack rolls against that enemy.
+Righteous Anger,Mighty,"When one or more friendly characters are damaged by an enemy attack while in your CMD range, gain +2 STR and ARM for one round."
+Tough,Mighty,"When you are disabled, roll a D6.  On a 5 or 6, heal 1 vitality point.  You are no longer disabled but you are knocked down."
+Ambidextrous,Skilled,You do not suffer penalties to your attack roll with a second weapon while using Two-Weapon Fighting.
+Cagey,Skilled,"When knocked down, immediately move up to 2"" (no free strikes).  You are not auto-hit with melee and do not take DEF penalty.  Stand up without forfeiting movement or action."
+Deft,Skilled,You gain boosted AGL rolls.
+Feat: Defensive Strike,Skilled,"When an enemy advances and ends movement in your melee range, spend a feat point to make a melee attack."
+Feat: Disarm,Skilled,"After hitting an enemy with non-spray/non-AOE ranged/melee attack, spend a feat point to disarm the target."
+Feat: Swashbuckler,Skilled,"Once during each turn, spend a feat point to gain 360 degree front arc and make melee attack against each target in melee range."
+Feat: Untouchable,Skilled,Spend a feat point to gain +3 DEF for one round.
+Preternatural Awareness,Skilled,You gain boosted Initiative rolls and enemies never gain back strike bonuses.
+Sidestep,Skilled,"When you hit with an enemy with a melee weapon, advance up to 2"".  You cannot be targeted by free strikes during this move."
+Virtuoso,Skilled,"Choose a military skill.  When making a non-AOE attack with a weapon with that skill, gain die to attack and damage and discard low die."
+Nyss Racial,,+1 on PER rolls. +3 ARM against cold damage.  -3 ARM against fire damage

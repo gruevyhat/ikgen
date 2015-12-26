@@ -1,0 +1,2 @@
+include ikg README.md LICENSE.txt
+recursive-include ikgen *

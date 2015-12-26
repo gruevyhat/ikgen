@@ -1,0 +1,53 @@
+Race,Set,PHY,SPD,STR,AGL,PRW,POI,INT,ARC,PER
+Bog Trog,Base,6,5,5,3,4,2,2,0,3
+Bog Trog,Hero,7,6,7,5,5,3,4,4,4
+Bog Trog,Veteran,8,6,8,6,6,4,5,6,5
+Bog Trog,Epic,9,6,9,7,7,5,6,7,6
+Dwarf,Base,6,4,5,3,4,3,4,0,3
+Dwarf,Hero,7,5,6,5,5,4,5,4,4
+Dwarf,Veteran,7,6,7,6,6,5,6,6,6
+Dwarf,Epic,8,6,8,7,7,6,7,7,7
+Farrow,Base,6,5,5,3,4,3,3,0,3
+Farrow,Hero,8,6,7,5,5,4,4,4,4
+Farrow,Veteran,8,6,7,6,6,5,5,6,6
+Farrow,Epic,9,6,9,7,7,6,6,7,7
+Gatormen,Base,6,5,6,3,4,2,3,0,2
+Gatormen,Hero,8,6,8,4,5,3,5,4,4
+Gatormen,Veteran,9,6,9,5,6,3,5,6,5
+Gatormen,Epic,10,6,10,6,7,4,6,7,6
+Gobber,Base,4,6,3,4,4,3,3,0,3
+Gobber,Hero,6,7,4,5,5,5,4,0,4
+Gobber,Veteran,7,7,5,6,6,6,5,0,4
+Gobber,Epic,7,7,6,7,7,7,6,0,5
+Human,Base,5,6,4,3,4,4,3,0,3
+Human,Hero,7,7,6,5,5,5,5,4,5
+Human,Veteran,8,7,7,6,6,6,6,6,6
+Human,Epic,8,7,8,7,7,7,7,8,7
+Iosan,Base,5,6,4,3,4,4,4,0,3
+Iosan,Hero,7,7,5,5,5,5,6,4,5
+Iosan,Veteran,7,7,6,6,6,6,6,6,6
+Iosan,Epic,7,7,7,7,7,7,7,8,7
+Nyss,Base,5,6,4,4,4,4,3,0,3
+Nyss,Hero,7,7,6,5,5,5,5,4,5
+Nyss,Veteran,7,7,7,6,6,6,6,6,6
+Nyss,Epic,8,7,8,7,7,7,6,7,6
+Ogrun,Base,6,5,6,3,4,3,3,0,2
+Ogrun,Hero,7,6,8,5,5,4,5,0,4
+Ogrun,Veteran,8,6,9,5,6,5,5,0,5
+Ogrun,Epic,9,6,10,6,7,6,6,0,6
+Pygmy troll,Base,5,6,4,3,3,4,3,0,3
+Pygmy troll,Hero,7,7,6,5,5,5,4,0,5
+Pygmy troll,Veteran,8,7,7,6,6,6,5,0,6
+Pygmy troll,Epic,9,7,8,7,6,7,6,0,6
+Satyxis,Base,5,6,5,3,4,3,3,0,3
+Satyxis,Hero,7,7,6,5,5,4,5,4,5
+Satyxis,Veteran,8,7,7,6,6,5,6,6,6
+Satyxis,Epic,8,7,8,7,7,6,7,7,7
+Tharn,Base,6,6,5,3,4,3,3,0,3
+Tharn,Hero,7,7,7,5,5,4,4,4,5
+Tharn,Veteran,8,7,7,5,5,4,4,4,5
+Tharn,Epic,9,7,8,7,7,6,6,7,6
+Trollkin,Base,6,5,5,3,4,2,3,0,3
+Trollkin,Hero,8,6,7,5,5,4,4,4,4
+Trollkin,Veteran,9,6,8,6,6,5,5,6,5
+Trollkin,Epic,10,6,9,7,7,6,6,7,6

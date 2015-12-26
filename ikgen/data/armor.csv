@@ -1,0 +1,29 @@
+Armor,Type,SPD Mod,DEF Mod,ARM Mod,Special Rules,P Field,Cost
+Alchemist's Leather,Light,0,-1,5,-,0,50
+Armored Great Coat,Light,0,-1,5,-,0,25
+Custom Battle Armor,Light,0,-1,6,"If not tailored for you, -2 DEF.",0,60
+Leather Armor,Light,0,-1,5,-,0,30
+Ordic Royal Marine,Light,0,-1,6,No swim penalty,0,90
+Plastron,Light,0,0,2,-,0,20
+Stormsmith,Light,0,-1,5,Immunity: Electricity,0,80
+Temple Flameguard,Light,0,-1,5,,0,40
+Assault Kommando Armor,Medium,0,-2,7,"Sealed, +3 ARM vs corrosion and fire",0,350
+Chain Mail,Medium,0,-2,7,"If not tailored for you, -2 DEF.",0,75
+Infantry Armor,Medium,0,-2,7,-,0,85
+Optifex Armor,Medium,0,-2,7,See NQ48 pg 69,0,885
+Tailored Plate,Medium,0,-1,7,-,0,130
+Vassal,Medium,0,-2,7,,0,90
+Winter Guard Armor,Medium,0,-2,7,gain +3 ARM vs Cold,0,100
+Bastion Heavy Armor,Heavy,-3,-4,10,Need Divine Fortitude to wear,0,400
+Cleanser Armor,Heavy,-1,-3,8,"Ignore Continuous Fire effects, +3ARM vs Fire",0,150
+Crucible Armor,Heavy,-1,-3,8,Immunity: Corrosion,0,145
+Exemplar Plate,Heavy,-2,-3,9,,0,175
+Full Plate,Heavy,-1,-3,8,-,0,100
+Man-O-War,Heavy,-3,-3,9,"See p183, Kings, Nations, and Gods",0,1500
+Storm Knight Armor,Heavy,-2,-3,9,Immunity: Electricity,0,225
+Warcaster Armor (Light),Warcaster,0,0,5,Warcaster Armor,6,2010
+Warcaster Armor (Medium),Warcaster,0,-1,7,Warcaster Armor,6,23060
+Warcaster Armor (Naval),Warcaster,0,-1,6,"Warcaster Armor, +3 swim, 5min air",6,3260
+Warcaster Armor (Heavy),Warcaster,0,-2,8,Warcaster Armor,6,2760
+Shield,Shield,,,Sp,Gain +1 ARM for each level in Shield against front arc attacks.,,
+"Shield, Combat",Shield,,,Sp,Gain +1 ARM for each level in Shield against front arc attacks.,,

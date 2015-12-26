@@ -1,0 +1,172 @@
+Spell,Cost,RNG,AOE,POW,UP,OFF,Notes
+Arcane Bolt,2,12,-,11,NO,YES,
+Arcane Strike,,,,,,,
+Arcantrik Bolt,2,10,-,12,NO,YES,Steamjack damaged becomes stationary for 1 round.
+Ashen Cloud,2,CTRL,3,–,YES,NO,Place a 3” AOE cloud effect anywhere completely in the spellcaster's control area.  Characters without Immunity: Fire suffer -2on attack rolls while within the AOE.
+Ashen Veil,,,,,,,
+Ashes to Ashes,4,8,*,10,NO,YES,"If the target is hit, he and d6 of the nearest enemies within 5” of the target suffer a POW 10 fire damage roll."
+Aura of Protection,2,SELF,CTRL,-,YES,NO,"While in CTRL area, friendly characters gain +2 ARM."
+Awareness,3,SELF,CTRL,–,NO,NO,"While in the spellcaster's control area, the front arc of characters in his battlegroup is extended to 360˚.  When determining LOS those characters ignore cloud effects, forests, and intervening characters.  Awareness lasts for one round."
+Banishing Ward,2,6,–,–,YES,NO,Enemy upkeep spells on the targeted friendly character expire.  The affected character cannot be targeted by enemy spells or Animi.
+Barrier of Flames,3,SELF,CTRL,–,NO,NO,"Friendly characters in the spellcaster's control area gain +1 DEF.  When a friendly character is hit with a melee attack while in the spellcaster's control area, the attacker suffers the Fire continuous effect.  Barrier of Flames lasts one round."
+Batten Down the Hatches,3,SELF,CTRL,–,NO,NO,"While in the spellcaster's control area, friendly characters in his battlegroup cannot be knocked down and gain +3ARM but suffer -2 DEF.  Batten Down the Hatches lasts one round."
+Battering Ram,2,6,–,12,NO,YES,When a character is hit by Battering Ram it can be pushed 3” directly away from the spell's point of origin.
+Black Out,4,SELF,CTRL,–,NO,NO,"Mechanika devices in the possession of enemy characters in the spellcaster's control area immediately deactivate.  If an enemy enters the spellcaster's control area, Mechanika devices in his possession immediately deactivate.  While in the spellcaster's control area, enemy characters cannot activate mechanika devices.  Black Out has no effect on steamjacks or mechanika armor.  Black out lasts for one round."
+Blade of Radiance,2,10,–,10,NO,YES,Infernal and Undead characters hit by this spell suffer an additional die of damage.
+Blazing Effigy,4,SELF,*,14,NO,NO,Enemies within 2” of target friendly character suffer a POW 14 fire damage roll.
+Bleed,,,,,,,
+Blessing of Health,1,6,–,–,YES,NO,"Target characters gains +3 on PHY rolls to resist poison, disease and infection.  Additionally, if the affected character is currently suffering from the effects of poison, he immediately makes a PHY roll against the toxin rating of the poison.  If the roll succeeds, the effects of the poison immediately expire."
+Blessing of Morrow,3,SELF,CTRL,–,YES,NO,"While in the spellcaster's control area, Friendly living characters do not suffer effects of lost aspects."
+Blessings of War,2,6,–,–,YES,NO,"Target character's weapons gain Blessed.  (When making an attack with a weapon with Blessed, ignore spell effects that add to the attacking character's ARM or DEF.)"
+Blizzard,1,6,–,–,NO,NO,"Center a 3” AOE cloud effect on the target character.  The AOE remains centered on the character.  If the character is destroyed, remove the AOE from play.  Blizzard lasts for one round."
+Blur,,,,,,,
+Boundless Charge,2,6,-,-,NO,NO,"Target can charge without spending focus/being forced, gains +2"" move and Pathfinder when it charges."
+Brittle Frost,3,8,–,–,YES,YES,"The next time the target suffers damage, halve its base ARM when calculating damage from the damage roll.  After applying this damage Brittle Frost expires."
+Broadside,3,SELF,CTRL,–,NO,NO,The spellcaster and steamjacks under the spellcaster's control currently in his control area can immediately make one normal ranged attack.  Broadside can be cast only once per turn.
+Celerity,2,6,–,–,YES,NO,Target character gains one additional quick action during each of his turns.
+Chain Lightning,3,10,–,10,NO,YES,"A character hit by Chain Lightning suffers a POW 10 electrical damage roll, and lightning arcs to d6 consecutive additional characters  The lightning arcs to the nearest character within 4” that it has not already arced to, ignoring the spellcaster.  Each character the lightning arcs to suffers a POW 10 electrical damage roll."
+Chasten,,,,,,,
+Chiller,2,6,–,–,YES,NO,"While within 2” of the target friendly character, enemy characters suffer -2 DEF unless they have Immunity: Cold."
+Cleansing Fire,3,8,3,14,NO,YES,"Cleansing Fire causes fire damage.  On a critical hit, characters hit suffer the Fire continuous effect."
+Convection,2,10,–,12,NO,YES,"When Convection destroys a living character, allocate 1 focus to jack in battlegroup in his control area."
+Crevasse,3,8,–,12,NO,YES,"If Crevasse incapacitates it's original target, you can make a SP6 attack using the Incapacitated character as the attack's point of origin. Characters hit suffer a POW 12 magical damage roll."
+Crusader's Call,3,SELF,CTRL,–,NO,NO,Friendly characters beginging a charge in the spellcaster's control area gaon a +2 movement.  Crusader's Call lasts for one round.
+Daylight,3,SELF,CTRL,–,NO,NO,"While in the spellcaster's control area, Infernal and Undead characters suffer -2 DEF and ARM.  Additionally, the area around the caster glows with enough light so see in darkness (p.225).  Daylight lasts for one round."
+Deadeye,,,,,,,
+Deceleration,3,SELF,CTRL,–,NO,NO,"While in the Spellcaster's control area, friendly characters gain +2 DEF and ARM against ranged attacks.  Deceleration lasts for one round."
+Deep Freeze,3,SELF,CTRL,–,NO,NO,"Characters within 2” of the spellcaster suffer a POW 12 damage roll.  Characters damaged by this spell cannot run, charge, or make power attacks for one round."
+Dissolution Bolt,,,,,,,
+Earth's Cradle,1,SELF,–,–,YES,NO,"The Spellcaster gains cover, does not suffer blast damage, and does not block LOS.  Earth's Cradle expires if the character moves, is placed. Or is engaged."
+Earthquake,3,10,5,–,NO,YES,Characters in the AOE are knocked down.
+Earthsplitter,4,10,3,14,NO,YES,Characters hit suffer a POW 14 fire damage roll.  The AOE is a cloud effect that remains in play for one round.  Characters entering or ending their activation in the AOE suffer an unstoppable POW 14 fire damage roll.
+Electrical Blast,3,8,3,13,NO,YES,"Electrical blast causes electrical damage.  Steamjacks damaged by Electrical Blast suffer Disruption. (steamjacks suffering Disruption loose all their focus , cannot be allocated focus and cannot channel spells for one round.)"
+Electrify,2,6,–,–,YES,NO,"If the target is hit with a melee attack, after the attack it resolved,the attacker is pushed 3” directly away from the affected character and suffers an unstoppable POW 14 electrical damage roll, then Electrify expires."
+Eliminator,3,8,3,13,NO,YES,"Immediately after this attack is resolved, the spellcaster can advance up to 2” for each enemy incapacitated by the attack."
+Entangle,1,8,–,–,NO,YES,The target character suffers -2 SPD and cannot run or charge for one round.
+Extinguisher,2,SELF,CTRL,–,NO,NO,Continuous fire effects in the spellcaster's control area immediately expire.
+Eyes of Truth,2,CTRL,–,–,YES,NO,"The character's PER rolls are boosted.  Additionally, the target number for Deception rolls against the character are increased by 3."
+Fail Safe,3,6,–,–,YES,NO,Target steamjack gains +2 ARM and does not suffer the effects of crippled systems.
+Fair Winds,1,SELF,–,–,NO,NO,The Spellcaster gains +1SPD this turn.
+Fire Group,2,SELF,CTRL,–,NO,NO,"While in the spellcaster's control area, his weapons and the ranged weapons of steamjacks under his control gain +2 RNG.  Fire Group lasts for one round."
+Fire Starter,1,8,–,–,NO,*,"The spellcaster starts a small fire withing the range of the spell and in LOS.  This spell can be used to target an enemy, in which case it requires an attack roll.  If the enemy is hit, he suffers the Fire continuous effect."
+Flame,3,SELF,CTRL,–,NO,NO,Enemies in the spellcaster's control area suffering the Fire continuous effect immediately suffer an additional unstoppable POW 12 fire damage roll.  This spell can be cast only once per turn.
+Flames of Wrath,1,6,–,–,NO,NO,"When target character incapacitates an enemy character with a melee attack, enemy characters within 1” of the incapacitated character suffer the Fire continuous effect.  Flames of Wrath last for one rond."
+Fog of War,3,SELF,CTRL,–,YES,NO,Characters gain Concealment while in the spellcaster's control area.
+Force Field,3,SELF,CTRL,–,YES,NO,"The spelcaster does not suffer collateral or blast damage and cannot be knocked down.  When an enemy AOE deviates from a point in the spellcaster's control area, after the deviation distance is rolledteh spellcaster's player chooses the deviation direction."
+Force Hammer,4,10,–,12,NO,YES,"If Force Hammer hits an non-incorporeal target, instead of suffering a normal damage roll, that target is slammed d6” directly away from the spell's point of origin regardless of it's base size and suffers aPOW 12 damage roll.  Collateral damage for this slam is POW 12."
+Force of Faith,4,SELF,CTRL,–,NO,NO,Enemies currently within the spellcaster's control area are immediately pushed d6” directly away from the spellcaster in the order he chooses.
+Fortify,2,6,–,–,YES,NO,"Target steamjack in the spellcaster's control gains +2 Arm.  The effected steamjack and any friendly character B2B with it cannot be knocked down, pushed, or slammed."
+Fortune,,,,,,,
+Foxhole,2,CTRL,5,–,YES,NO,"Place a 5” AOE anywhere completely in the spellcaster's control area.  Characters completely in the AOE have cover and do not suffer blast damage.  When drawing LOS to a character not completely within the AoE, ignore interviening characters completely within the AOE."
+Freezing Grip,4,8,–,–,NO,YES,Target character  hit becomes stationary for one round unless the target has Immunity: Cold.
+Freezing Mist,4,SELF,*,–,NO,NO,"While in the spellcaster's control area, enemy characters without Immunity: Cold suffer -2SPD and DEF.  Freezing Mist lasts for one round."
+Frostbite,2,SP 8,–,12,NO,YES,Frostbite causes cold damage.
+Frozen Ground,3,SELF,–,–,NO,NO,Enemies that move more than2” and end their movement in the spellcaster's control area are knocked down at the end of their movement.  Frozen Ground lasts for one round.
+Fuel the Flames,3,SELF,CTRL,–,YES,NO,Fire continuous effects in the spellcaster's control area never expire.
+Full Throttle,3,SELF,CTRL,–,NO,NO,"Steamjacks under the spellcaster's control and beginning their turn in his control area can run, charge, or make slam or trample power attacks without being forced or driven that activation.The Spellcaster and steamjacks under the spellcasters control and in his control area gain boosted melee attack rolls. Full Throttle last for one turn."
+Grind,3,10,–,14,NO,YES,"When a steamjack is hit by Grind, it suffers 1 damage to it's first available movement system box."
+Guided Blade,1,6,–,–,NO,NO,"For one round, target gets +1 to Melee Attack and Magical Weapon."
+Guided Fire,3,SELF,CTRL,–,NO,NO,"The spellcaster and steamjacks under his control in his control area, gains boosted ranged attacks.  Guided fire lasts for one round"
+Hand of Fate,2,6,–,–,YES,NO,Target character gains an additional die on attack and damage rolls.  Discard the lowest of each roll.
+Heal,4,*,–,–,NO,NO,"Friendly incapacitated character in B2B with the spellcaster is no longer incapacitated and regains 1 vitality in each aspect.The character no longer suffers from his most recent roll on the Injury table (p.217).  The target character becomes knocked down.  Each time a character is targeted by this spell make d6 roll on the Price of Healing table (p.240), adding +1 to the roll each time the character has been targeted by this spell after the first time."
+Heightened Reflexes,2,6,–,–,YES,NO,Target character cannot be knocked down or made stationary
+Hex Blast,3,10,3,13,NO,YES,Upkeep spells and Animi on the character directly hit by Hex Blast immediately expire.
+Hidden Path,,,,,,,
+Hoarfrost,3,8,3,14,NO,YES,"Hoarfrost causes Cold damage.  On a critical hit, the character hit becomes stationary for one round unless they have Immunity: Cold."
+Howling Flames,2,SP 8,–,10,NO,YES,"Howling Fames causes fire damage.  On a critical hit, the character hit suffers Fire continuous effect."
+Hymm of Battle,2,6,–,–,NO,NO,Target steamjack gains +2 on attack and damage rolls.  Hymn of Battle lasts for one round.
+Hymm of Passage,2,6,–,–,NO,NO,Target steamjack cannot be targeted by non-magial ranged attacks.  Hymn of Passage lasts for one round.
+Hymm of Shielding,4,SELF,CTRL,–,NO,NO,"While in this character's control area, Friendly characters cannot be targeted by enemy spells.  Hymn of Shielding lasts for one round."
+Ice Shield,1,6,–,–,YES,NO,Target gains +2 ARM.  Ice Shield immediately expires if the effected character moves or is damaged.
+Icy Bolt,2,10,–,12,NO,YES,"Ice Bolt causes cold damage.  On a critical hit, the character hit becomes stationary unless they have Immunity: Cold."
+Icy Grip,2,8,–,–,YES,YES,Target character without Immunity: Cold suffer -2DEF and cannot run or make power attacks.
+Ignite,2,6,–,–,YES,NO,Target gets +2 to Melee Damage Rolls and Crit Fire on normal melee attacks.
+Immolation,2,8,–,12,NO,YES,Fire damage.  On Critical Hit: Fire Continuous effect.
+Inferno,3,10,3,12,NO,YES,all characters hit suffer a POW 12 fire damage roll.  The AOE remains in play for one round.  Characters entering or ending their turns in the AOE suffer an unstoppable POW 12 fire damage roll.
+Influence,1,10,–,–,NO,YES,The spellcaster make a contested Willpower roll against a living character hit by this sell.  If the caster wins the player takes control of the character hit.  The character immediately makes one normal melee attack then Influence expires.
+Inhospitable Ground,3,SELF,CTRL,–,NO,NO,"While in the spellcaster's control area, other characters treat open ground as difficult terrain.  Inhospitable Ground lasts for one round."
+Iron Aggression,3,6,–,–,YES,NO,"Target steamjack can run, charge and make slam and trample power attacks without being forced or driven and gains boosted melee attack rolls."
+Jackhammer,1,6,–,–,NO,NO,The target friendly steamjack can immediately make one melee attack.
+Jump Start,1,SELF,CTRL,–,NO,NO,The spellcaster and steamjacks under his control in his control area can immediately turn to face any direction.Affected steamjacks that are stationary or knocked down are no longer stationary and stand up.
+Lamentation,3,SELF,CTRL,–,YES,NO,"While in the spellcaster's control area. Enemies pay double the fatigue, focus or fury point cost to cast or upkeep spells."
+Light in the Darkness,1,SELF,CTRL,–,YES,NO,Area around the caster glows with enough light to see.
+Lightning Tendrils,3,6,–,–,YES,NO,"The target friendly character gains Immunity: Electricity, and the character's melee weapons gain Reach and Electro Leap."
+Locomotion,1 to 3,6,–,–,NO,NO,The spellcaster spends up to 3 focus points to cast Locomotion.  Target steamjack immediately advances 1” for every focus point spent.  A steamjack can be targeted by Locomotion only once per round.
+Mirage,3,6,–,–,YES,NO,"During the spellcaster's Control Phase after upkeep has been paid, the target friendly character's controller can place him anywhere completely within 2” of his current location."
+Molten Metal,,,,,,,
+Obliteration,4,10,4,15,NO,YES,The force of the attack blasts apart the earth itself.
+Occultation,2,6,–,–,YES,NO,Target character gains stealth and +3 on his Sneak rolls.
+Overmind,4,SELF,CTRL,–,NO,NO,"The spellcaster immediately makes a contested Willpower roll against all living enemies in his control area.  Roll once for the spellcaster.  If the spellcaster beats the enemy's Willpower roll, he can cause that character to advance up to 3” and perform one non-spell, non-feat quick action.  If the enemy beats or ties the spellcaster's roll, he is not effected. This spell can be cast only once per round."
+Polarity Shield,2,6,–,–,YES,NO,Target character cannot be targeted by a charge made by a character in his front arc.
+Positive Charge,2,6,–,–,NO,NO,"Target steamjack gains +2 on melee attack and melee damage rolls.  While within 3” of the effected warjack, friendly characters gain +2 on melee attack and melee damage rolls.  Positive Charge lasts for one round."
+Power Booster,1,5,–,–,NO,NO,"If the target steamjack the spellcaster controls has no focus points, it gains 1 focus point. If the steamjack is Disrupted, it is no longer Disrupted."
+Prayer of Guidance,3,6,–,–,NO,NO,Target character gains 2 additional dice on his next skill roll.  Discard the lowest 2 dice in the roll.  Prayer of Guidance can be cast only once per day.
+Protection from Cold,1,6,–,–,YES,NO,Target character gains Immunity: Cold.
+Protection from Corrosion,1,6,–,–,YES,NO,Target character gains Immunity: Corrosion
+Protection from Electricity,1,6,–,–,YES,NO,"Target character gains Immunity: Electricity, and cannot be Disrupted."
+Protection from Fire,1,6,–,–,YES,NO,Target character gains Immunity: Fire.
+Purification,3,SELF,CTRL,–,NO,NO,"Continuous effects, Animus, and upkeep spells in the spellcaster's control area immediately expire."
+Raging Winds,4,SELF,CTRL,–,NO,NO,"While in the spellcaster's control area, enemies suffer -2 DEF.  Enemies beginning their turn in the spellcaster's control area cannot run or charge. Raging wind lasts for one round."
+Razor Wind,2,10,–,12,NO,YES,A blade of wind slices through the target.
+Redline,2,6,–,–,YES,NO,"Target friendly steamjack gains +2 STR and SPD, and can run, charge, power attack slams or tramples without spending focus or being driven. When the steamjack ends its turn it suffers d3 damage points."
+Refuge,2,6,–,–,YES,NO,"When the target character hits another character with an attack during his turn, Immediately after his turn ends the character effected by this spell can make a full advance.  The character cannot be targeted by free strikes during this movement."
+Return Fire,1,6,–,–,NO,NO,"When target character is targeted by an enemy ranged attack, after the attack is resolved the affected character can make one normal ranged or melee attack, then Return Fire expires.  Return Fire lasts for one turn."
+Rift,3,8,4,13,NO,YES,The AOE is rough terrain and remains in play for one round.
+Righteous Flames,2,6,–,–,NO,NO,"The character gains Immunity: Fire.  When a character without Immunity : Fire ends its movement within 2” of the affected character, the character without Immunity: Fire  suffers the Fire continuous effect. Righteous Flamed lasts for one round."
+Rime,2,6,–,–,NO,NO,"The character gains Immunity: Cold.  When a character without Immunity : Cold ends its movement within 2” of the affected character, the character without Immunity: Cold  omes Stationary until the end of its next turn. Rime lasts for one round."
+Rock Hammer,3,10,3,14,NO,YES,"On a critical hit, characters hit are knocked down."
+Rock Wall,2,CTRL,WALL,–,YES,NO,"Place a wall template (p. 352) anywhere completely in the spellcaster's control area where it does not touch a character's base, an obstruction, or an obstacle   The wall is a linear obstacle that provides cover."
+Rune Shot: Accuracy,1,SELF,–,–,NO,NO,The character's next rune shot ranged attack roll this round is boosted.
+Rune Shot: Black Penny,1,SELF,–,–,NO,NO,This character's next rune shot ranged attack roll this turn ignores the firing into melee penalty.
+Rune Shot: Brutal,1,SELF,–,–,NO,NO,The character's next rune shot ranged damage roll this round is boosted.
+Rune Shot: Detonator,3,SELF,*,–,NO,NO,"If the spellacaster directly hits a target with its next rune shot ranged attack this turn, center a 4” AOE on the target.  Characters other than the original target within the AOE suffer an unstoppable damage roll with a POW equal to the POW of the ranged weapon."
+Rune Shot: Earth Shaker,3,SELF,*,–,NO,NO,"If the character directly hits a target with its next rune shot ranged attack, the attack becomes AOE 5 and POW 10.  Characters hit by the AOE suffer no damage but are knocked down."
+Rune Shot: Fire Beacon,2,SELF,*,–,NO,NO,"The spelcaster's next rune shot ranged attack this turn becomes AOE 5 POW –.  While the character is within the AOE, he looses Camouflage and Stealth, and other characters can ignore cloud effects when dertemingin LOS to him.  The AOE lasts for one round."
+Rune Shot: Freeze Fire,4,SELF,–,–,NO,NO,"If the spellcastrer's next rune shot ranged attack this turn hits, the target directly hit becomes Stationary for one round."
+Rune Shot: Heart Stopper,4,SELF,–,–,NO,NO,Damage exceeding the ARM of the character hit by the spelcaster's next rune shot ranged attack this turn is doubled.  A character disabled by this attack cannot make a Tough roll.
+Rune Shot: Iron Rot,1,SELF,–,–,NO,NO,"If the spellcaster's next rune shot ranged attack directly hits a steamjack, in addition to any other damage and effects from the attack, the steamjack also suffers d3 damage points."
+Rune Shot: Molten Shot,1,SELF,–,–,NO,NO,"If the spellcaster's next rune shot ranged attack directly hits, the target directly hit suffers the Fire continuous effect."
+Rune Shot: Momentum,4,SELF,–,–,NO,NO,"If the Spellcaster hits with his next rune shot ranged attack this turn, the character hit is slammed directly away from the spellcaster regardless of base size and suffers a damage roll with POW equal to the ranged weapon.  Collateral damage from this slam is equal to the POW of the ranged weapon."
+Rune Shot: Phantom Seeker,3,SELF,–,–,NO,NO,The spellcaster's next rune shot ranged attack this turn ignores LOS when making ranged attacks.  The attack also ignores Concealment and Cover.
+Rune Shot: Shadow Fire,2,SELF,–,–,NO,NO,"If the spellcaster's hits a target with his next rune shot ranged attack this turn, friendly characters can ignore the target when determining LOS and making ranged attacks for one round."
+Rune Shot: Silencer,1,SELF,–,–,NO,NO,"the spellcaster's next rune shot ranged attack is completely silent, and gives no sign of being fired.  Neither the firing of the weapon nor the impact of the round make any sound.  Any immediate sound from the target that is hit, such as a scream, shout, or the fall of the body is silenced."
+Rune Shot: Spell Cracker,3,SELF,–,–,NO,NO,"If the spellcaster directly hits with his next rune shot ranged attack this turn, upkeep spells and animi on the target hit immediately expire."
+Rune Shot: Spontaneous Combustion,1,SELF,*,–,NO,NO,"if the spellcaster destrys a living character with his next rune shot ranged attack, Place a 3” AOE cloud effect on the destroyed character, then remove the destroyed character from the table.  The AOE remains in play for one round."
+Rune Shot: Thunderbolt,1,SELF,–,–,NO,NO,"If you directly hit, target is pushed d3”.  Critical: Knock down after push."
+Rune Shot: Trick Shot,2,SELF,–,–,NO,NO,"If the spellcaster directly hits a target with his next rune shot ranged attack this turn, choose a character within 4” of the character that was hit.  After the attack is resolved, the spellcaster immediately makes a ranged attack roll against the chosen character.  If the character is hit he suffers a damage roll equal to the POW of the ranged weapon but does not suffer any other rune shot spell effects of rune shot spells cast on the original attack.  The point of origin of this damage is the character originally hit."
+Sanguine Blessing,3,SELF,CTRL,–,YES,NO,"When a friendly character in the spellcaster's control area would suffer a damage roll, the spellcastrer can suffer the damage roll instead.  Decide whether the spellcaster suffers the damage before the roll is made."
+Sea of Fire,4,SELF,*,–,NO,NO,Enemy characters without Immunity: Fire within 5” of the spellcaster suffer the Fire continuous effect.
+Shatter Storm,2,6,–,–,YES,NO,"When target character directly hits and destroys an enemy character with a ranged or melee attack, center a 3” AOE on the destroyed character, then remove the destroyed character from the table.  Characters in the AOE are hit and suffer a POW 8 blast damage roll."
+Shield of Faith,2,6,–,–,YES,NO,Target character gains +2 ARM against magic attacks and Infernal and Undead characters
+Shock Wave,4,SELF,*,13,NO,NO,Characters within 5” of the spellcaster suffer a POW 13 damage roll.  Each enemy damaged by Shock Wave is pushe d6” directly away from the spellcaster in the order you choose.
+Short Out,1,8,–,–,NO,YES,Mechanika devices in the possession of the target character hit immediately deactivate.  Sort out has not effect on steamjacks or Mechankia armor.
+Snipe,2,6,–,–,YES,NO,Target character's ranged weapons gain +4 RNG.
+Solid Ground,2,SELF,CTRL,–,YES,NO,"While in the spellcaster's control area, friendly characters cannot be knocked down and do not suffer blast damage."
+Solovin's Boon,1,SELF,–,–,YES,NO,The spellcaster can reroll failed Mechanika skill rolls.  Each failed roll can be rerolled only once due to Solovin's Boon.
+Star Fire,4,SELF,CTRL,–,NO,NO,Enemies that end their movement closer to the spellcaster than they began suffer an unstoppable POW 12 damage roll.  Star Fire lasts for one round.
+Staying Winter's Hand,2,SELF,CTRL,–,YES,NO,"While in the spellcaster's control area, friendly characters gain +2ARM against Cold damage.  Additionally, while affected by this spell character never suffer the effects of cold weather and are kept warm."
+Stone Stance,1,6,–,–,NO,NO,"Target character cannot be knocked down, pushed, or slammed for one round."
+Stone Strength,2,6,–,–,YES,NO,Target character gains +1 STR and ARM.
+Storm Tossed,1,8,–,–,NO,YES,"When a enemy character is hit by Storm Tossed, he is pushed 3” directly away from the spells point of origin."
+Sunburst,3,10,3,13,NO,YES,Blast damage from this spell only affects enemies.
+Superiority,3,6,–,–,YES,NO,"Target friendly steamjack gains +2 SPD, MAT, and DEF and cannot be knocked down."
+Telekinesis,2,8,–,–,YES,*,"Place target character completely within 2” of his current location.   When Telekinesis targets an enemy character, it is an offensive spell and requires a magic attack roll.a character can be affected by Telekinesis only once per round."
+Temper Metal,2,6,–,–,YES,NO,Target friendly steamjack gains +2ARM and is immune to continuous effects.
+Tempest,4,8,4,12,NO,YES,Characters hit by Tempest are knocked down and suffer a POW 12 damage roll.
+Tide of Steel,4,SELF,CTRL,–,NO,NO,The spellcaster and steamjacks currently under his control and in his control area can immediately advance 3”.
+Tornado,4,10,–,13,NO,YES,"Instead of suffering a normal damage roll, non-incorporeal characters hit by Tornado are thrown d6” directly away from the spell's point of origin regardless of its base size and suffers a POW 13 damage roll. Collateral damage from this throw is POW 13."
+Transference,2,SELF,CTRL,–,YES,NO,The spellcaster can allow other friendly characters in his control area to spend focus to boost melee attack and melee damage rolls this turn at a cost of 1 focus per boost.
+Triage,2,B2B,–,–,NO,NO,Thespellcaster must be in B2B with an incapacitated character to cast this spell.  When this spell is cast the incapacitated character is immediately stabalized.
+True Path,3,SELF,CTRL,–,NO,NO,Friendly characters beginning their turns in the spellcaster's control area gain +2 Movement and Pathfinder during their turns.  True Path lasts for one round.
+True Sight,2,SELF,–,–,YES,NO,"The character ignores concealment, Camuoflage, and Stealth.  The character can also see in complete darkness."
+Twister,,,,,,,
+Vision,2,6,_,_,YES,NO,"The next time target character is directly hit by an attack, he suffers no damage roll from the attack then Vision Expires."
+Voltaic Lock,4,10,*,–,NO,YES,Target steamjack cannot advance and suffers -4 DEF.  A steamjack beginning an advance within 3” of the hit steamjack cannot run or charge and can only advance directly towards it.Voltaic Lock lasts for one round.
+Wall of Fire,2,CTRL,WALL,–,YES,NO,"Place a wall template (p. 352) anywhere completely in the spellcaster's control area where it does not touch a character's base, an obstruction, or an obstacle. When a character enters or ends his turn in the wall area, he suffers an unstoppable POW 12 fire damage roll and the Fire continuous effect.  Characters within the wall template gain Concealment."
+White Out,4,SELF,CTRL,–,YES,NO,"While in the Spellcaster's control area, enemy characters have their LOS reduced to 5”."
+Wind Blast,2,CTRL,5,–,NO,NO,Place a 5” AOE anywhere completely in the spellcaster's control area.  Cloud effects overlapping the AOE expire.  Characters suffer -3RAT while within the AOE.  The AOE remains in play for one round.
+Wind Strike,1,6,–,–,NO,YES,This spell does not inflict damage.  An enemy directly hit by this spell is pushed 1” directly away from the sellcaster.  After the enemy is pushed the spellcaster can advance up to 1” directly toward the pushed enemy.
+Wings of Air,2,SELF,–,–,NO,NO,Place the spellcaster anywhere complettely within 5” of his current location.  Wings of Air can be cast only once per turn.
+Winter Storm,3,SELF,CTRL,–,NO,NO,"Enemies that begin their turn in the spellcaster's control range loose Eyeless Sight, Flight, and Pathfinder during their turns.  Winter Storm lasts for one turn."
+Zephyr,3,6,––,–,NO,NO,Target character can immediately advance up to 5”.  A character can be affected by Zephyr only once per round.
+Staying Winter’s Hand,,,,,,,
