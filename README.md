@@ -5,16 +5,16 @@ A command line character generator for the Iron Kingdoms RPG.
 
 Usage: Character Generation
 ---------------------------
-Usage: ikg (options)
+    Usage: ikg (options)
 
-Options:
-    -r, --race STR       IK race, e.g., 'Human (Cygnaran)' or 'Nyss'.
-    -a, --archetype STR  One of 'Gifted', 'Mighty', 'Skilled', or 'Intellectual'.
-    -c, --careers STR    A JSON-formatted list of careers, e.g., '["Solder", "Thief"]'.
-    -s, --stats STR      A JSON-formatted dict of attributes, e.g., '{"PER":8}'.
-    -l, --list           List possible races, classes, and archetypes.
-    -h --help
-    --version
+    Options:
+        -r, --race STR       IK race, e.g., 'Human (Cygnaran)' or 'Nyss'.
+        -a, --archetype STR  One of 'Gifted', 'Mighty', 'Skilled', or 'Intellectual'.
+        -c, --careers STR    A JSON-formatted list of careers, e.g., '["Solder", "Thief"]'.
+        -s, --stats STR      A JSON-formatted dict of attributes, e.g., '{"PER":8}'.
+        -l, --list           List possible races, classes, and archetypes.
+        -h --help
+        --version
 
 Example
 -------
