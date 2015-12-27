@@ -21,9 +21,12 @@ from fdfgen import forge_fdf
 
 
 SCRIPTDIR = os.path.dirname(os.path.realpath(__file__)) 
+
 SKILL = re.compile("(?!<: )([A-Z][^,:]+?) ([0-9])")
 CHOOSE_N = re.compile("Choose (?:one|two|three): (.*)")
 KHARD_SFX = re.compile("([^aeiou])$")
+MEAS = re.compile("(\d+)-(\d+) (?:in|lb)")
+
 ARCHETYPES = [u'Gifted', u'Intellectual', u'Mighty', u'Skilled']
 STATS = [u'PHY', u'SPD', u'STR', u'AGL', u'PRW', u'POI', u'INT', u'ARC', u'PER']
 LEVELS = ['Hero', 'Veteran', 'Epic']
@@ -60,6 +63,11 @@ def choice_geom(S, p=0.3):
     while n >= len(S):
         n = np.random.geometric(p) - 1
     return S[n]
+
+
+def rand_meas(text):
+    male, female = [(int(x), int(y)) for x, y in MEAS.findall(text)]
+    return {'Male': choice(range(*male)), 'Female': choice(range(*female))} 
 
 
 def title_caps(text):
@@ -140,6 +148,7 @@ class Character(object):
         else:
             stats += ["Race: " + self.race]
         stats += ["Gender: " + self.gender]
+        stats += ["Measurements: %s\'%s\", %s lbs." % (self.height/12, self.height%12, self.weight)]
         stats += ["Careers: " + ", ".join(self.careers)]
         stats += ["Archetype: " + self.archetype]
         stats += ['Level: ' + self.level]
@@ -158,6 +167,7 @@ class Character(object):
                   for i, r in self.ability_table.iterrows()]
         stats += ["Military Skills: " + ', '.join("%s %d" % i for i in self.skills_mil.items())]
         stats += ["Occupational Skills: " + ', '.join("%s %d" % i for i in self.skills_occ.items())]
+        stats += ['Languages: ' + self.languages]
         if self.spells:
             stats += ["Spells:                Cost  RNG  AOE POW  UP OFF"]
             stats += ["  %20.20s %4.4s %4.4s %4.4s %3.3s %3.3s %3.3s" % tuple(r[0:7])
@@ -319,6 +329,9 @@ class Character(object):
     def _gen_personal(self):
         self.gender = choice(['Male', 'Female'])
         self.subrace = choice(self.race_table.Subrace.any().split(", "))
+        self.languages = self.race_table.Languages.any()
+        self.height = rand_meas(self.race_table.Height.any())[self.gender]
+        self.weight = rand_meas(self.race_table.Weight.any())[self.gender]
         given = self.data.names.Names[
             (self.data.names.Race == self.race) &
             (self.data.names.Subrace == self.subrace) &
