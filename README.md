@@ -34,6 +34,6 @@ Standard Python package installation.
 
 Dependencies
 ------------
-pandas >= 0.17.1
-numpy >= 1.10.2
-docopt >= 0.6.1
+pandas >= 0.17.1  
+numpy >= 1.10.2  
+docopt >= 0.6.1  
