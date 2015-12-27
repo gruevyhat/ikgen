@@ -32,4 +32,10 @@ def display_character():
     return "<pre>"+c.summary()+"</pre>"
 
 
-run(host='192.168.1.135', port=8080, debug=True)
+def start_service(host='localhost', port='8080'):
+    run(host=host, port=port, debug=True)
+
+
+if __name__ == "__main__":
+
+    start_service('192.168.1.135', 8080)

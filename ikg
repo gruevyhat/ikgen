@@ -4,8 +4,9 @@
 Character generator for Iron Kingdoms. Note that input parameters are case sensitive.
 
 Usage: ikg (options)
+       ikg serv (options)
 
-Options:
+Character Generation Options:
     -r, --race STR       IK race, e.g., 'Human (Cygnaran)' or 'Nyss'.
     -a, --archetype STR  One of 'Gifted', 'Mighty', 'Skilled', or 'Intellectual'.
     -c, --careers STR    A JSON-formatted list of careers, e.g., '["Solder", "Thief"]'.
@@ -14,8 +15,13 @@ Options:
     -h --help
     --version
 
-Example:
-    ikg -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
+Web Service Options:
+    -n, --hostname HOST  The hostname of the web service. [default: localhost]
+    -p, --port PORT      An open port to listen on. [default: 8080]
+
+Examples:
+    ikg gen -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
+    ikg serv -h 127.0.0.1 -p 8080
 
 """
 
@@ -27,32 +33,41 @@ import sys
 import json
 from docopt import docopt
 from ikgen.character import Character, CharData
+from ikgen.service import start_service
+
 
 ARGS = ("race", "careers", "archetype", "stats")
+
+
+def list_data():
+    cd = CharData()
+    print "CAREERS:", ", ".join(cd.careers.Career.tolist())
+    print
+    print "RACES:", ", ".join(cd.races.Race.tolist())
+    print
+    print "ARCHETYPES:", ", ".join(cd.archetypes.Archetype.tolist())
+    sys.exit()
+
 
 if __name__ == "__main__":
 
     try:
         args = {k.replace("-", ""): v
                 for k, v in docopt(__doc__, version=__version__).items()}
-
+        print args
         if args['list']:
-            cd = CharData()
-            print "CAREERS:", ", ".join(cd.careers.Career.tolist())
-            print
-            print "RACES:", ", ".join(cd.races.Race.tolist())
-            print
-            print "ARCHETYPES:", ", ".join(cd.archetypes.Archetype.tolist())
-            sys.exit()
+            list_data()
+        elif args['serv']:
+            start_service(host=args['hostname'],
+                          port=int(args['port']))
+        else:
+            args = {k: v for k, v in args.items() if k in ARGS}
+            args = {k: json.loads(v) if k in ('careers', 'stats') else v
+                    for k, v in args.items() if v}
+            c = Character(**args)
+            sys.stdout.write(c.summary()+"\n")
 
-        args = {k: v for k, v in args.items() if k in ARGS}
-        args = {k: json.loads(v) if k in ('careers', 'stats') else v
-                for k, v in args.items() if v}
-
-        c = Character(**args)
     except KeyboardInterrupt:
         pass
     except Exception as e:
         print "Something unfortunate has happened. ('%s')" % e
-    else:
-        sys.stdout.write(c.summary()+"\n")
