@@ -2,14 +2,9 @@
 
 """
 
-Simple web service for the WMD classifier. Examples:
+Simple web service for the generator. Example:
 
-$ curl -X GET http://localhost:8080/pred_text/sarin%20gas
-$ curl -i -F data=@test.json http://localhost:8080/pred_file
-
-Note that the model needs to have been pickled with joblib, like so:
-
-    joblib.dump(clf, "exp01.mdl", compress=9)
+$ curl -X GET http://localhost:8080/ikgen
 
 """
 
