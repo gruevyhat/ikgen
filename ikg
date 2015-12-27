@@ -54,7 +54,6 @@ if __name__ == "__main__":
     try:
         args = {k.replace("-", ""): v
                 for k, v in docopt(__doc__, version=__version__).items()}
-        print args
         if args['list']:
             list_data()
         elif args['serv']:
