@@ -27,8 +27,10 @@ Example
 The following command will generate a Cygnaran Investigator/Arcanist (Illiminated) with a PER of 4. Note that specified attributes overwrite randomly generated ones, and may override race or career limits.
 
     ikg -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
-    ikg serv -h 127.0.0.1 -p 8080
 
+Parameters can also be passed to the web service as an HTTP GET. Note that parameters with special characters should be urlencoded.
+
+    http://localhost:8080/ikgen?race=Human%20\(Cygnaran\)&careers=["Investigator",%20"Arcanist%20(Illuminated)"]&archetype=Gifted&stats={"PER":4}
 
 Installation
 ------------
