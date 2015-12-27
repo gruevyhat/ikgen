@@ -49,7 +49,7 @@ bottle >= 0.12.8
 
 Acknowledgments
 ---------------
-It would not have been possible to put this together without the tabular data in Ski Anderson's [Character Generator](http://privateerpressforums.com/showthread.php?158365-IKRPG-Generator-Tools).
+It would have been utterly impossible to put this together without the tabular data in Ski Anderson's very nice [Character Generator](http://privateerpressforums.com/showthread.php?158365-IKRPG-Generator-Tools).
 
 Change History
 --------------
