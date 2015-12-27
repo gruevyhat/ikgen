@@ -18,7 +18,7 @@ Usage: Character Generation
 
 Example
 -------
-The following command will generate a Cygnaran Investigator/Arcanist (Illiminated) with a PER of 4. Note that specified attributes overwrite randomly generated ones, and may subvert race or career-provided bonuses.
+The following command will generate a Cygnaran Investigator/Arcanist (Illiminated) with a PER of 4. Note that specified attributes overwrite randomly generated ones, and may override race or career limits.
 
     ikg -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
 
