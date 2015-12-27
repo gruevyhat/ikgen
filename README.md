@@ -47,6 +47,10 @@ numpy >= 1.10.2
 docopt >= 0.6.1  
 bottle >= 0.12.8  
 
+Acknowledgments
+---------------
+It would not have been possible to put this together without the tabular data in Ski Anderson's [http://privateerpressforums.com/showthread.php?158365-IKRPG-Generator-Tools|Character Generator].
+
 Change History
 --------------
 0.0.1 - Initial version.  
