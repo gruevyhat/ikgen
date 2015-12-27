@@ -155,7 +155,8 @@ class Character(object):
         stats += ["Stats: PHY %(PHY)d, SPD %(SPD)d, STR %(STR)d" % self.stats]
         stats += ["       AGL %(AGL)d, PRW %(PRW)d, POI %(POI)d" % self.stats]
         stats += ["       INT %(INT)d, ARC %(ARC)d, PER %(PER)d" % self.stats]
-        stats += ["       DEF %(DEF)d, ARM %(ARM)d, Init %(Initiative)d, Cmd %(Command)d" % self.stats]
+        stats += ["       DEF %(DEF)d, ARM %(ARM)d, Init %(Initiative)d" % self.stats]
+        stats += ["       Cmd %(Command)d, Will %(Willpower)d" % self.stats]
         stats += ["Life: PHY 1-2 (-2 STR) " + (u"\u2b1c " * self.stats['PHY'])]
         stats += ["      AGL 3-4 (-2 ATT) " + (u"\u2b1c " * self.stats['AGL'])]
         stats += ["      INT 5-6 (-2 DEF) " + (u"\u2b1c " * self.stats['INT'])]
@@ -297,6 +298,7 @@ class Character(object):
         self.stats[u'ARM'] = self.stats['PHY']
         self.stats[u'Initiative'] = sum(self.stats[s] for s in ['PRW', 'SPD', 'PER'])
         self.stats[u'Command'] = self.stats['INT']
+        self.stats[u'Willpower'] = self.stats['INT'] + self.stats['PHY']
         if 'Command' in self.skills_occ.keys():
             self.stats[u'Command'] += int(self.skills_occ['Command'])
 
