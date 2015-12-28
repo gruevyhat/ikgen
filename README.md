@@ -85,6 +85,8 @@ Acknowledgments
 ---------------
 It would have been utterly impossible to put this together without the tabular data in Ski Anderson's very nice [Character Generator](http://privateerpressforums.com/showthread.php?158365-IKRPG-Generator-Tools).
 
+Note that Iron Kingdoms and related content are exclusively trade marked by [Privateer Press](http://privateerpress.com/). The `ikgen` application is neither connected with nor endorsed by Privateer Press in any way, shape or form. 
+
 Change History
 --------------
 0.0.1 - Initial version.  
