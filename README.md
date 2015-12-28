@@ -28,9 +28,9 @@ The following command will generate a Cygnaran Investigator/Arcanist (Illiminate
 
     ikg -r 'Human (Cygnaran)' -c '["Investigator", "Arcanist (Illuminated)"]' -a 'Gifted' -s '{"PER":4}'
 
-Parameters can also be passed to the web service as an HTTP GET. Note that parameters with special characters should be urlencoded.
+Parameters can also be passed to the web service as an HTTP GET. Note that parameters with special characters may need to be urlencoded, depending on your query method.
 
-    http://localhost:8080/ikgen?race=Human%20\(Cygnaran\)&careers=["Investigator",%20"Arcanist%20(Illuminated)"]&archetype=Gifted&stats={"PER":4}
+    http://localhost:8080/ikgen?race=Human%20(Cygnaran)&careers=["Investigator",%20"Arcanist%20(Illuminated)"]&archetype=Gifted&stats={"PER":4}
 
 These parameters might return, for example, the following output:
     
