@@ -32,6 +32,40 @@ Parameters can also be passed to the web service as an HTTP GET. Note that param
 
     http://localhost:8080/ikgen?race=Human%20\(Cygnaran\)&careers=["Investigator",%20"Arcanist%20(Illuminated)"]&archetype=Gifted&stats={"PER":4}
 
+These parameters might return, for example, the following output:
+    
+    Name: Eliass Talley
+    Race: Human (Cygnaran: Caspian)
+    Gender: Male
+    Measurements: 6'1", 144 lbs.
+    Careers: Investigator, Arcanist (Illuminated)
+    Archetype: Gifted
+    Level: Hero
+    Stats: PHY 6, SPD 6, STR 4
+           AGL 4, PRW 4, POI 4
+           INT 3, ARC 3, PER 4
+           DEF 14, ARM 6, Init 14
+           Cmd 3, Will 9
+    Life: PHY 1-2 (-2 STR) ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+          AGL 3-4 (-2 ATT) ⬜ ⬜ ⬜ ⬜
+          INT 5-6 (-2 DEF) ⬜ ⬜ ⬜
+    Benefits:
+      Fast Caster: Gain one extra quick action each activation that can only be used to cast a spell.
+      Rune Reader: Identify any spell cast in line of sight.  Learn the type of magic cast and tradition of caster.
+      Hyper Perception: You gain boosted PER rolls.
+    Abilities:
+      Astute: The character can re-roll failed Detection rolls.
+      Great Power: This character can upkeep one spell each turn without spending a Focus point or gaining a Fatigue point.
+    Military Skills: Pistol 1
+    Occupational Skills: Detection 1, Sneak 1, Research 1, Interrogation 1, Lore (Arcane) 1, Medicine 1, Law 1, Forensic Science 1
+    Languages: Native (Cygnaran/Sulese, Khadoran, Llaelese, Ordic, Tribal) plus one more.
+    Spells:                Cost  RNG  AOE POW  UP OFF
+             Eyes of Truth    2 CTRL    –   – YES  NO
+              Guided Blade    1    6    –   –  NO  NO
+               Occultation    2    6    –   – YES  NO
+    Connections: Order of Illumination
+    GC: 175.0
+
 Installation
 ------------
 Standard Python package installation.
