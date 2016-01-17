@@ -11,6 +11,7 @@ Character Generation Options:
     -a, --archetype STR  One of 'Gifted', 'Mighty', 'Skilled', or 'Intellectual'.
     -c, --careers STR    A JSON-formatted list of careers, e.g., '["Solder", "Thief"]'.
     -s, --stats STR      A JSON-formatted dict of attributes, e.g., '{"PER":8}'.
+    -x, --xp INT         Starting experience. [default: 0]
     -l, --list           List possible races, classes, and archetypes.
     -h --help
     --version
@@ -36,7 +37,7 @@ from ikgen.character import Character, CharData
 from ikgen.service import start_service
 
 
-ARGS = ("race", "careers", "archetype", "stats")
+ARGS = ("race", "careers", "archetype", "stats", "xp")
 
 
 def list_data():
@@ -63,6 +64,7 @@ if __name__ == "__main__":
             args = {k: v for k, v in args.items() if k in ARGS}
             args = {k: json.loads(v) if k in ('careers', 'stats') else v
                     for k, v in args.items() if v}
+            args['xp'] = int(args['xp'])
             c = Character(**args)
             sys.stdout.write(c.summary()+"\n")
 
