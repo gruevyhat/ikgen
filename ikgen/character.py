@@ -8,12 +8,12 @@ author: GVH
 version: 0.0.1
 """
 
-# TODO: Stuff!!
-# TODO: Write out json.
+# TODO: Assets
 # TODO: Write FDF output for PDF generation.
 
 import os
 import re
+import json
 import pandas as pd
 import numpy as np
 from random import choice
@@ -183,15 +183,48 @@ class Character(object):
         stats += ["Occupational Skills: " + ', '.join("%s %d" % i for i in self.skills_occ.items())]
         stats += ['Languages: ' + self.languages]
         if self.spells:
-            stats += ["Spells:                Cost  RNG  AOE POW  UP OFF"]
-            stats += ["  %20.20s %4.4s %4.4s %4.4s %3.3s %3.3s %3.3s" % tuple(r[0:7])
-                      for i, r in self.spell_table.iterrows()]
+            stats += ["Spells:\n" + self.spell_table.to_string(index=False)]
         if self.connections:
             stats += ["Connections: " + ", ".join(self.connections)]
         if self.assets:
             stats += ["Assets: " + ", ".join(self.assets)]
         stats += ["GC: " + str(self.money)]
         return "\n".join(stats)
+
+    def to_json(self, fn=None):
+        D = {"Name": self.name}
+        if self.subrace != '-':
+            D.update({"Race": self.race})
+        else:
+            D.update({"Race": self.race})
+        D.update({"Gender": self.gender})
+        D.update({"Measurements": {"height": self.height,
+                                   "weight": self.weight}})
+        D.update({"Careers": ", ".join(self.careers)})
+        D.update({"Archetype": self.archetype})
+        D.update({"Level": "%s (%d XP)" % (self.level, self.xp)})
+        D.update({"Stats": self.stats})
+        D.update({"Benefits": self.benefit_table[['Benefit', 'Description']]
+                 .apply(lambda x: "%s: %s" % (x.iloc[0], x.iloc[1]), axis=1)
+                 .tolist()})
+        D.update({"Abilities": self.ability_table[['Ability', 'Short Description']]
+                 .apply(lambda x: "%s: %s" % (x.iloc[0], x.iloc[1]), axis=1)
+                 .tolist()})
+        D.update({"Military Skills": self.skills_mil})
+        D.update({"Occupational Skills": self.skills_occ})
+        D.update({"Languages": self.languages})
+        if self.spells:
+            D.update({"Spells": self.spell_table.to_records(index=False).tolist()})
+        if self.connections:
+            D.update({"Connections": self.connections})
+        if self.assets:
+            D.update({"Assets": self.assets})
+        D.update({"GC": self.money})
+        if fn:
+            with open(fn, "w") as fo:
+                json.dump(D, fo)
+        else:
+            return json.dumps(D)
 
     def build(self):
         self._gen_race()
@@ -242,36 +275,12 @@ class Character(object):
             self.career_mask &= self.data.careers.Gifted == 0
         if self.archetype != "Mighty":
             self.career_mask &= self.data.careers.Mighty == 0
-        # Choose first career
-        if self.careers:
-            c1 = self.data.careers[self.data.careers.Career == self.careers[0]]
-        else:
-            c1 = self.data.careers[self.career_mask].sample()
-        # Limit by first career
-        basename = c1.Career.tolist()[0].split()[0]
-        self.career_mask &= self.data.careers.Career \
-            .apply(lambda x: not x.startswith(basename))
-        # Limit by first career restrictions
-        c1_restr = [c for c in c1['Career Restrictions'].any().split(', ')
-                    if c != '-']
-        if c1_restr:
-            self.career_mask &= self.data.careers.Career.isin(c1_restr)
-        # Limit by second career restrictions
-        self.career_mask &= self.data.careers['Career Restrictions'] \
-            .apply(lambda x: x == '-' and x.find(basename) == -1)
-        # Choose second career
-        if self.careers:
-            c2 = self.data.careers[self.data.careers.Career == self.careers[1]]
-        else:
-            c2 = self.data.careers[self.career_mask].sample()
-        c2_restr = [c for c in c1['Career Restrictions'].any().split(', ')
-                    if c != '-']
-        if c2_restr:
-            self.career_mask &= self.data.careers.Career.isin(c2_restr)
-        self.career_mask &= self.data.careers.Career \
-            .apply(lambda x: not x.startswith(basename))
-        self.career_table = pd.concat([c1, c2])
-        self.careers = self.career_table.Career.tolist()
+        # Choose careers
+        for i in range(2):
+            try:
+                self._incr_career(self.careers[i])
+            except:
+                self._incr_career()
         # Handle bonus benefits
         self.benefits += [b for b in self.career_table['Benefit Bonus'].tolist()
                           if b != '-']
@@ -283,6 +292,30 @@ class Character(object):
         for k, v in bonus_stats.items():
             for i in range(len(self.stat_table)):
                 self.stat_table[k].iat[i] += v
+
+    def _incr_career(self, career=None):
+        if career:
+            new_career = self.data.careers[self.data.careers.Career == career]
+        else:
+            careers = self.data.careers[self.career_mask]
+            new_career = careers[~careers.Career.isin(self.careers)].sample()
+        restr = [c for c in new_career['Career Restrictions'].any().split(', ')
+                 if c != '-']
+        if restr and set(self.careers) \
+                .difference(new_career.Career.tolist()) \
+                .difference(restr):
+            self._incr_career()
+        else:
+            basename = new_career.Career.any().split()[0]
+            self.career_mask &= ~self.data.careers.Career \
+                .apply(lambda x: x.startswith(basename))
+            if restr:
+                self.career_mask &= self.data.careers.Career.isin(restr)
+            try:
+                self.career_table = pd.concat([self.career_table, new_career])
+            except:
+                self.career_table = new_career
+            self.careers = self.career_table.Career.tolist()
 
     def _gen_abilities(self):
         if not self.abilities:
@@ -334,7 +367,7 @@ class Character(object):
             spells = ', '.join(self.career_table['Starting Sp']).split(', ')
             self.spell_table = self.data \
                 .spells[self.data.spells.Spell.isin(spells)]
-            self.spells = set(self.spells + self.spell_table.Spell.tolist())
+            self.spells = list(set(self.spells + self.spell_table.Spell.tolist()))
 
     def _gen_connections(self):
         conns = [c for c in
@@ -348,7 +381,7 @@ class Character(object):
                   self.career_table.Assets.tolist()
                   if a != "-"]
         if assets:
-            self.assets = set(self.assets + assets)
+            self.assets = list(set(self.assets + assets))
 
     def _gen_money(self):
         money = self.career_table.GC.sum()
@@ -437,18 +470,12 @@ class Character(object):
                 self._incr_ben()
         if ben_or_car > 0:
             if choice(range(2)) == 0:
-                self._incr_car()
+                self._incr_career()
                 self._incr_occ()
                 self._incr_occ()
             else:
                 self._incr_ben()
         self._calc_derived_stats()
-
-    def _incr_car(self):
-        careers = self.data.careers[self.career_mask]
-        new_career = careers[~careers.Career.isin(self.careers)].sample()
-        self.career_table = pd.concat([self.career_table, new_career])
-        self.careers = self.career_table.Career.tolist()
 
     def _incr_ben(self):
         benefits = self.data.benefits[self.data.benefits.Archetype == self.archetype]
@@ -515,5 +542,7 @@ class Character(object):
 if __name__ == "__main__":
 
     #c = Character(archetype="Gifted", careers=['Warcaster', 'Cutthroat'], race="Human (Khadoran)", xp=150)
-    c = Character(xp=30)
+    #c = Character(archetype="Skilled", careers=['Trencher'], race="Human (Cygnaran)", xp=150)
+    c = Character(xp=10)
     print c.summary()
+    print c.to_json()
