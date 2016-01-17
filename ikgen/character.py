@@ -8,7 +8,8 @@ author: GVH
 version: 0.0.1
 """
 
-# TODO: Apply experience.
+# TODO: Stuff!!
+# TODO: Write out json.
 # TODO: Write FDF output for PDF generation.
 
 import os
@@ -20,7 +21,7 @@ from collections import defaultdict
 from fdfgen import forge_fdf
 
 
-SCRIPTDIR = os.path.dirname(os.path.realpath(__file__)) 
+SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
 
 SKILL = re.compile("(?!<: )([A-Z][^,:]+?) ([0-9])")
 CHOOSE_N = re.compile("Choose (?:one|two|three): (.*)")
@@ -29,14 +30,25 @@ MEAS = re.compile("(\d+)-(\d+) (?:in|lb)")
 
 ARCHETYPES = [u'Gifted', u'Intellectual', u'Mighty', u'Skilled']
 STATS = [u'PHY', u'SPD', u'STR', u'AGL', u'PRW', u'POI', u'INT', u'ARC', u'PER']
-LEVELS = ['Hero', 'Veteran', 'Epic']
-
+LEVELS = {'Hero': 2, 'Veteran': 4, 'Epic': 6}
+GENERAL_SKILLS = ['Animal Handling', 'Climbing', 'Detection', 'Driving',
+    'Gambling', 'Intimidation', 'Jumping', 'Riding', 'Swimming',
+    'Lore (Extraordinary Zoology)', 'Lore (Morrowan)', 'Lore (Ancient History)',
+    'Lore (Urcaen Lore)', 'Lore (Infernal)', 'Lore (Draconic)', 'Lore (Nation)']
 
 def sumdict(list_of_dicts):
     c = defaultdict(int)
     for d in list_of_dicts:
         for k, v in d.iteritems():
             c[k] += v
+    return c
+
+
+def maxdict(list_of_dicts):
+    c = defaultdict(int)
+    for d in list_of_dicts:
+        for k, v in d.iteritems():
+            c[k] = max(c[k], v)
     return c
 
 
@@ -126,7 +138,7 @@ class Character(object):
                  archetype=None, benefits=[],
                  careers=[], spells=[], abilities=[],
                  connections=[], money=0,
-                 assets=[], chardata=None):
+                 assets=[], xp=0, chardata=None):
         self.race = race
         self.archetype = archetype
         self.benefits = benefits
@@ -140,6 +152,7 @@ class Character(object):
         self.level = 'Hero'
         self.data = chardata or CharData()
         self.build()
+        self.apply_xp(xp)
 
     def summary(self):
         stats = ["Name: " + self.name]
@@ -151,7 +164,7 @@ class Character(object):
         stats += ["Measurements: %s\'%s\", %s lbs." % (self.height/12, self.height%12, self.weight)]
         stats += ["Careers: " + ", ".join(self.careers)]
         stats += ["Archetype: " + self.archetype]
-        stats += ['Level: ' + self.level]
+        stats += ['Level: %s (%d XP)' % (self.level, self.xp)]
         stats += ["Stats: PHY %(PHY)d, SPD %(SPD)d, STR %(STR)d" % self.stats]
         stats += ["       AGL %(AGL)d, PRW %(PRW)d, POI %(POI)d" % self.stats]
         stats += ["       INT %(INT)d, ARC %(ARC)d, PER %(PER)d" % self.stats]
@@ -193,8 +206,9 @@ class Character(object):
         self._gen_money()
         self._gen_assets()
         self._gen_personal()
-        self._gen_derived_stats()
+        self._calc_derived_stats()
         self._adjust_race()
+        self._adjust_careers()
 
     def _gen_race(self):
         if not self.race:
@@ -221,35 +235,43 @@ class Character(object):
         self.benefits = self.benefit_table.Benefit.tolist()
 
     def _gen_careers(self):
+        # Limit by race
+        self.career_mask = self.data.careers[self.race] == 1
+        # Limit for archetype
+        if self.archetype != "Gifted":
+            self.career_mask &= self.data.careers.Gifted == 0
+        if self.archetype != "Mighty":
+            self.career_mask &= self.data.careers.Mighty == 0
+        # Choose first career
         if self.careers:
-            self.career_table = self.data \
-                .careers[self.data.careers.Career.isin(self.careers)]
+            c1 = self.data.careers[self.data.careers.Career == self.careers[0]]
         else:
-            # Limit by race
-            mask = self.data.careers[self.race] == 1
-            # Limit for archetype
-            if self.archetype != "Gifted":
-                mask &= self.data.careers.Gifted == 0
-            if self.archetype != "Mighty":
-                mask &= self.data.careers.Mighty == 0
-            # Choose first career
-            c1 = self.data.careers[mask].sample()
-            # Limit by first career
-            basename = c1.Career.tolist()[0].split()[0]
-            mask &= self.data.careers.Career \
-                .apply(lambda x: not x.startswith(basename))
-            # Limit by first career restrictions
-            c1_restr = [c for c in c1['Career Restrictions'].any().split(', ')
-                        if c != '-']
-            if c1_restr:
-                mask &= self.data.careers.Career.isin(c1_restr)
-            # Limit by second career restrictions
-            mask &= self.data.careers['Career Restrictions'] \
-                .apply(lambda x: x == '-' and x.find(basename) == -1)
-            # Choose second career
-            c2 = self.data.careers[mask].sample()
-            self.career_table = pd.concat([c1, c2])
-            self.careers = self.career_table.Career.tolist()
+            c1 = self.data.careers[self.career_mask].sample()
+        # Limit by first career
+        basename = c1.Career.tolist()[0].split()[0]
+        self.career_mask &= self.data.careers.Career \
+            .apply(lambda x: not x.startswith(basename))
+        # Limit by first career restrictions
+        c1_restr = [c for c in c1['Career Restrictions'].any().split(', ')
+                    if c != '-']
+        if c1_restr:
+            self.career_mask &= self.data.careers.Career.isin(c1_restr)
+        # Limit by second career restrictions
+        self.career_mask &= self.data.careers['Career Restrictions'] \
+            .apply(lambda x: x == '-' and x.find(basename) == -1)
+        # Choose second career
+        if self.careers:
+            c2 = self.data.careers[self.data.careers.Career == self.careers[1]]
+        else:
+            c2 = self.data.careers[self.career_mask].sample()
+        c2_restr = [c for c in c1['Career Restrictions'].any().split(', ')
+                    if c != '-']
+        if c2_restr:
+            self.career_mask &= self.data.careers.Career.isin(c2_restr)
+        self.career_mask &= self.data.careers.Career \
+            .apply(lambda x: not x.startswith(basename))
+        self.career_table = pd.concat([c1, c2])
+        self.careers = self.career_table.Career.tolist()
         # Handle bonus benefits
         self.benefits += [b for b in self.career_table['Benefit Bonus'].tolist()
                           if b != '-']
@@ -284,16 +306,21 @@ class Character(object):
             self.stats['ARC'] = 2
         stat_sum = sum(self.stats.values())
         while sum(self.stats.values()) < stat_sum + 3:
-            stat = choice_geom(self.archetype_table['Stat Order'].any().split(", "),
-                               float(self.archetype_table['p']))
-            limit = self.stat_table[self.stat_table.Set == self.level][stat] \
-                .iloc[0]
-            if self.stats[stat] < limit:
-                self.stats[stat] += 1
+            self._incr_stat()
         if self.fixed_stats:
             self.stats.update(self.fixed_stats)
 
-    def _gen_derived_stats(self):
+    def _incr_stat(self):
+        stat = choice_geom(self.archetype_table['Stat Order'].any().split(", "),
+                           float(self.archetype_table['p']))
+        limit = self.stat_table[self.stat_table.Set == self.level][stat] \
+            .iloc[0]
+        if self.stats[stat] < limit:
+            self.stats[stat] += 1
+        else:
+            self._incr_stat()
+
+    def _calc_derived_stats(self):
         self.stats[u'DEF'] = sum(self.stats[s] for s in ['AGL', 'SPD', 'PER'])
         self.stats[u'ARM'] = self.stats['PHY']
         self.stats[u'Initiative'] = sum(self.stats[s] for s in ['PRW', 'SPD', 'PER'])
@@ -314,7 +341,7 @@ class Character(object):
                  self.career_table['Starting Conns'].tolist()
                  if c != 'None']
         if conns:
-            self.connections = set(self.connections + conns)
+            self.connections = self.connections + conns
 
     def _gen_assets(self):
         assets = [a for a in
@@ -355,7 +382,7 @@ class Character(object):
     def _adjust_race(self):
         if self.race.startswith("Human"):
             self.stats[choice(["PHY", "AGL", "INT"])] += 1
-            self._gen_derived_stats()
+            self._calc_derived_stats()
         elif self.race == "Iosan":
             abil = choice([a for a in
                            self.career_table['All Abilities']
@@ -375,8 +402,107 @@ class Character(object):
         self.benefit_table = self.data \
             .benefits[self.data.benefits.Benefit.isin(self.benefits)]
 
-    def apply_xp(self, xp):
-        pass
+    def _adjust_careers(self):
+        if self.career_table.Career.apply(lambda x: x.startswith("Warcaster")).any():
+            limit = self.stat_table[self.stat_table.Set == self.level]['ARC'] \
+                .iloc[0]
+            if self.stats['ARC'] < limit:
+                self.stats['ARC'] += 1
+            else:
+                self._incr_stat()
+
+    def apply_xp(self, xp=None):
+        if xp >= 50:
+            self.level = "Veteran"
+        if xp >= 100:
+            self.level = "Epic"
+        self.xp, occ, sacm, stat, ben, ben_or_car = self.data.xp.loc[xp].tolist()
+        if occ > 0:
+            for _ in range(occ):
+                self._incr_occ()
+        if sacm > 0:
+            for _ in range(sacm):
+                sacm_fncs = {0: self._incr_abil,
+                             1: self._incr_conn,
+                             2: self._incr_mil}
+                if self.spells \
+                        and len(self.spell_table) < 2 * self.stats['INT']:
+                    sacm_fncs.update({3: self._incr_spell})
+                sacm_fncs[choice(range(len(sacm_fncs)))]()
+        if stat > 0:
+            for _ in range(stat):
+                self._incr_stat()
+        if ben > 0:
+            for _ in range(ben):
+                self._incr_ben()
+        if ben_or_car > 0:
+            if choice(range(2)) == 0:
+                self._incr_car()
+                self._incr_occ()
+                self._incr_occ()
+            else:
+                self._incr_ben()
+        self._calc_derived_stats()
+
+    def _incr_car(self):
+        careers = self.data.careers[self.career_mask]
+        new_career = careers[~careers.Career.isin(self.careers)].sample()
+        self.career_table = pd.concat([self.career_table, new_career])
+        self.careers = self.career_table.Career.tolist()
+
+    def _incr_ben(self):
+        benefits = self.data.benefits[self.data.benefits.Archetype == self.archetype]
+        new_benefit = benefits[~benefits.Benefit.isin(self.benefits)].sample()
+        self.benefit_table = pd.concat([self.benefit_table, new_benefit])
+        self.benefits = self.benefit_table.Benefit.tolist()
+
+    def _incr_spell(self):
+        spell_lists = [l for l in
+                       self.career_table['All Sp'].apply(lambda x: x.split(", ")).sum()
+                       if l != "-"]
+        all_spells = [x for y in
+                      [self.data.spell_lists[s]
+                       .apply(lambda x: x.split(", ")).sum()
+                       for s in spell_lists]
+                      for x in y]
+        new_spell = choice([s for s in all_spells if s not in
+                          self.spell_table.Spell.tolist()])
+        self.spell_table = pd.concat([self.spell_table,
+                                      self.data.spells[self.data.spells.Spell == new_spell]])
+
+    def _incr_abil(self):
+        all_abils = self.career_table['All Abilities'] \
+            .apply(lambda x: x.split(", ")).sum()
+        new_abil = choice([a for a in all_abils if a not in
+                           self.ability_table.Ability.tolist()])
+        self.ability_table = pd.concat([self.ability_table,
+                                        self.data.abilities[self.data.abilities.Ability == new_abil]])
+
+    def _incr_conn(self):
+        conns = self.career_table['All Conns'].apply(lambda x: x.split(', ')).sum()
+        self.connections += [choice(conns)]
+
+    def _incr_occ(self):
+        skill_limits = maxdict(self.career_table["All Occ"]
+                               .apply(parse).tolist() + [self.skills_occ])
+        skill = choice(skill_limits.keys())
+        if self.skills_occ.get(skill, 0) < min(skill_limits[skill],
+                                               LEVELS[self.level]):
+            if skill == "General Skills":
+                skill = choice(GENERAL_SKILLS)
+            self.skills_occ[skill] += 1
+        else:
+            self._incr_occ()
+
+    def _incr_mil(self):
+        skill_limits = maxdict(self.career_table["All Military"]
+                               .apply(parse).tolist() + [self.skills_mil])
+        skill = choice(skill_limits.keys())
+        if self.skills_mil[skill] < min(skill_limits[skill],
+                                        LEVELS[self.level]):
+            self.skills_mil[skill] += 1
+        else:
+            self._incr_mil()
 
     def write_fdf(self):
         fields = [('Name', 'John Smith'), ('Sex', 'Male')]
@@ -388,5 +514,6 @@ class Character(object):
 
 if __name__ == "__main__":
 
-    c = Character()
+    #c = Character(archetype="Gifted", careers=['Warcaster', 'Cutthroat'], race="Human (Khadoran)", xp=150)
+    c = Character(xp=30)
     print c.summary()
