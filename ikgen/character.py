@@ -8,7 +8,7 @@ author: GVH
 version: 0.0.1
 """
 
-# TODO: Assets
+# TODO: Assets, MAT, RAT
 # TODO: Write FDF output for PDF generation.
 
 import os
@@ -182,6 +182,10 @@ class Character(object):
         stats += ["Military Skills: " + ', '.join("%s %d" % i for i in self.skills_mil.items())]
         stats += ["Occupational Skills: " + ', '.join("%s %d" % i for i in self.skills_occ.items())]
         stats += ['Languages: ' + self.languages]
+        if self.armor:
+            stats += ["Armor:\n" + self.armor_table.to_string(index=False)]
+        if self.weap:
+            stats += ["Weapons:\n" + self.weap_table.to_string(index=False)]
         if self.spells:
             stats += ["Spells:\n" + self.spell_table.to_string(index=False)]
         if self.connections:
@@ -213,6 +217,10 @@ class Character(object):
         D.update({"Military Skills": self.skills_mil})
         D.update({"Occupational Skills": self.skills_occ})
         D.update({"Languages": self.languages})
+        if self.armor:
+            D.update({"Armor": self.armor_table.to_records(index=False).tolist()})
+        if self.weap:
+            D.update({"Weapons": self.weap_table.to_records(index=False).tolist()})
         if self.spells:
             D.update({"Spells": self.spell_table.to_records(index=False).tolist()})
         if self.connections:
@@ -239,6 +247,8 @@ class Character(object):
         self._gen_money()
         self._gen_assets()
         self._gen_personal()
+        self._gen_weap()
+        self._gen_armor()
         self._calc_derived_stats()
         self._adjust_race()
         self._adjust_careers()
@@ -315,7 +325,7 @@ class Character(object):
                 self.career_table = pd.concat([self.career_table, new_career])
             except:
                 self.career_table = new_career
-            self.careers = self.career_table.Career.tolist()
+            self.careers = list(set(self.careers + [new_career.Career.any()]))
 
     def _gen_abilities(self):
         if not self.abilities:
@@ -387,6 +397,24 @@ class Character(object):
         money = self.career_table.GC.sum()
         if money:
             self.money += money
+
+    def _gen_weap(self):
+        assets = ''.join(self.assets).lower()
+        weaps = [w for w in self.data.weapons.Weapon.tolist()
+                 if assets.find(w.lower()) > -1]
+        best_skill = max(self.skills_mil.items(), key=lambda x: x[1])[0]
+        weaps += self.data.weapons.Weapon[(self.data.weapons.Skill == best_skill)
+                                          & (self.data.weapons.Cost != -1)
+                                          & (self.data.weapons.Cost <= self.money)] \
+            .sample().tolist()
+        self.weap_table = self.data.weapons[self.data.weapons.Weapon.isin(weaps)]
+        self.weap = self.weap_table.Weapon.tolist()
+
+    def _gen_armor(self):
+        string_match = self.data.armor.Armor \
+            .apply(lambda x: self.career_table.Assets.sum().lower().find(x.lower()) > -1)
+        self.armor_table = self.data.armor[string_match]
+        self.armor = self.armor_table.Armor.tolist()
 
     def _gen_personal(self):
         self.gender = choice(['Male', 'Female'])
@@ -542,7 +570,7 @@ class Character(object):
 if __name__ == "__main__":
 
     #c = Character(archetype="Gifted", careers=['Warcaster', 'Cutthroat'], race="Human (Khadoran)", xp=150)
-    #c = Character(archetype="Skilled", careers=['Trencher'], race="Human (Cygnaran)", xp=150)
-    c = Character(xp=10)
+    c = Character(archetype="Skilled", careers=['Trencher', 'Ranger'], race="Human (Cygnaran)", xp=150)
+    #c = Character(xp=10)
     print c.summary()
-    print c.to_json()
+    #print c.to_json()

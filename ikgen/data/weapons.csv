@@ -78,13 +78,6 @@ Storm Glaive,Ranged,Spec,"4""",–,POI,0,12,-,Electrical.  Character takes POW 1
 "Sword-Cannon, Heavy",Ranged,1 heavy,"10""","50""",Rifle,-1,12,-,See p. 270 and 271,150
 "Sword-Cannon, Repeating",Ranged,5 MCLR,"10""","50""",Rifle,-1,10,-,See p. 270,100
 Vislovski Carbine,Ranged,5,"10""","50""",Rifle,0,10,-,"Atk -2 as grenade launcher, see P 188 KNG",110
-Aperture Beam,Ranged,-,Err:509,-,POI,0,Err:509,Err:508,Causes Elec. Damage,
-Article 1185,Ranged,1,"6""",-,Light Artillery,-2,13,-,See p. 59 NQ47,
-Fettershot,Ranged,3 Heavy,"10""","50""",Rifle,-2,12,-,See p. 59 NQ47,
-Imprecator,Ranged,1 Light,"8""","40""",Pistol,0,11,-,See p. 60 NQ47,
-Northwind,Ranged,1 heavy,"8""","40""",Rifle,-1,12,-,See p. 62 NQ47,
-Reconciler,Ranged,1 Light,"14""","70""",Rifle,0,10,-,See p. 62 NQ47,
-Trammel Shortarm,Ranged,5 Light,"8""","40""",Pistol,0,10,-,See p. 63 NQ47,
 Annihilator Blade,Melee,,,,Great Weapon,0,5,,"Reach, STR 7.",10
 Assassin's Blade,Melee,,,,Hand Weapon,-1,4,,Add +2 to back strike damage,10
 Axe,Melee,,,,Hand Weapon,0,3,,-,8
@@ -111,8 +104,8 @@ Deadblow Hammer,Melee,,,,Hand Weapon,-1,3,,Feat Pt gain adtl die vs KD tar. +1 C
 Dueling Buckler,Melee,,,,Hand Weapon,-1,0,,+1 ARM vs Melee attacks in front arc if not used to attack that turn,10
 Durkin Bar,Melee,,,,Great Weapon,-2,5,,Req. STR 5 2H. FMF 1.3.1 for full rules,15
 Entrenching Tool,Melee,,,,Hand Weapon,-1,3,,Counts as a Spade,15
-Fell Blade,Melee,,,,Great Weapon,0,6,,"2-hand, Reach, Magic, Rules NQ46 30",x
-Firebrand,Melee,,,,Great Weapon,-2,7,,"Crit: Continuous Fire effect, STR 5",x
+Fell Blade,Melee,,,,Great Weapon,0,6,,"2-hand, Reach, Magic, Rules NQ46 30",-1
+Firebrand,Melee,,,,Great Weapon,-2,7,,"Crit: Continuous Fire effect, STR 5",-1
 Flail,Melee,,,,Hand Weapon,-1,4,,Ignore ARM from bucklers/shields.,15
 "Flail, Two-Handed",Melee,,,,Great Weapon,-2,6,,Reach. 2-hand. Ignore ARM from shields.,25
 "Gaff, Hand",Melee,,,,Hand Weapon,0,2,,-,1
@@ -122,7 +115,7 @@ Garrote,Melee,,,,Unarmed Combat,0,-,,KNG241,2
 "Garrote, Clockwork",Melee,,,,Unarmed Combat,0,-,,KNG242,15
 Gun Axe,Melee,,,,Hand Weapon,-1,3,,Can be used as a gun,80
 Halberd,Melee,,,,Great Weapon,0,5,,When used 1-hand: -1A/POW4. Reach.,25
-Halberd (Consecrated),Melee,,,,Great Weapon,0,5,,Reach. See p 365 KNG,x
+Halberd (Consecrated),Melee,,,,Great Weapon,0,5,,Reach. See p 365 KNG,-1
 Halberd (Voltaic),Melee,,,,Great Weapon,1,6,,"Arc lighting 4"",  POW 10.",1110
 Hand Pick,Melee,,,,Hand Weapon,-1,2,,Feat pt gain adtl die vs KD & Prone  tar.,5
 Ice Axe,Melee,,,,Hand Weapon,0,2,,+1 Climbing while on snow or ice,5
@@ -130,9 +123,9 @@ Ice Maul,Melee,,,,Great Weapon,0,5,,"STR 7, 2H only, Reach, Booted Dam vs char w
 'Jack Wrench,Melee,,,,Hand Weapon,-2,3,,Critical KO. See Pg 274,10
 Knuckledusters,Melee,,,,Unarmed Combat,0,1,,Special rules with knockout strike.,5
 Kopis,Melee,,,,Hand Weapon,-1,3,,+2 to charge attack rolls.  Crit: 1 Feat=Extra die.,15
-Lacerator,Melee,,,,Hand Weapon,-3,4,,Reach. Crit KD. Full rules FMF 1.1.2,x
+Lacerator,Melee,,,,Hand Weapon,-3,4,,Reach. Crit KD. Full rules FMF 1.1.2,-1
 Lance,Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted.,15
-Lance (Blessed),Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted. See 365 KNG,x
+Lance (Blessed),Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted. See 365 KNG,-1
 Lance (Electro),Melee,,,,Lance,0,7,,Reach. STR 5. Only charge attacks and mounted. +2 POW on charge while mounted.,1760
 Mace,Melee,,,,Hand Weapon,-1,4,,Crit: Living can be KO'd.,15
 Maul,Melee,,,,Great Weapon,0,6,,STR 5. 2-hand. Crit: Feat for Slam.,20
@@ -145,7 +138,7 @@ Pickaxe,Melee,,,,Hand Weapon,-1,4,,"Against KD target, Feat: Extra Damage Die.",
 Railman's Adze,Melee,,,,Great Weapon,-2,7,,Req. STR 6 2H. -2 DEF after miss till next turn.,20
 Rapier,Melee,,,,Hand Weapon,0,2,,Feat: Boost Attack and Damage.,15
 Reclaimant Torch,Melee,,,,Great Weapon,-1,4,,"Reach, 1 point fire damage & continuous fire effect",30
-Relic Blade,Melee,,,,Great Weapon,0,5,,Magical Weapon for a menite,x
+Relic Blade,Melee,,,,Great Weapon,0,5,,Magical Weapon for a menite,-1
 Rynnish Fan,Melee,,,,Hand Weapon,1,1,,,20
 Shield,Melee,,,,Shield,0,0,,Bonus to ARM equal to Shield Skill.,20
 "Shield, Combat",Melee,,,,Shield,-1,3,,Bonus to ARM equal to Shield Skill.,35
@@ -155,13 +148,13 @@ Spike Maul,Melee,,,,Great Weapon,-2,6,,STR 5. 2-hand. Crit: KD. -2 DEF after mis
 Springblade,Melee,,,,Hand Weapon,0,1,,Draw without using Quick Action.,12
 Staff,Melee,,,,Great Weapon,0,3,,Reach. 2-hand. Feat: Trip attack.,5
 "Staff, Battle",Melee,,,,Great Weapon,0,4,,Reach. 2-hand. Feat: Trip. Crit: Living can be KO'd.,12
-"Staff, Orgoth",Melee,,,,Great Weapon,0,6,,"1h -2 , See p 185 Kings, Nations, Gods",x
+"Staff, Orgoth",Melee,,,,Great Weapon,0,6,,"1h -2 , See p 185 Kings, Nations, Gods",-1
 Storm Glaive,Melee,,,,Great Weapon,-1,7,,When used 1-hand: -2A/POW5.  Special rules.,1560
 Stormcaller and Lightning Rod,Melee,,,,Great Weapon,-1,3,,When used 1-hand: -2A.  Special rules.,1160
 Sword,Melee,,,,Hand Weapon,0,3,,-,12
-"Sword, Blazing",Melee,,,,Great Weapon,0,5,,"STR 5, see p 365 KNG",x
+"Sword, Blazing",Melee,,,,Great Weapon,0,5,,"STR 5, see p 365 KNG",-1
 "Sword, Cane",Melee,,,,Hand Weapon,0,2,,POW 0 as cane.,15
-"Sword, Dress",Melee,,,,Hand Weapon,1,1,,spedn 1 feat for boost attack + damage,35+
+"Sword, Dress",Melee,,,,Hand Weapon,1,1,,spedn 1 feat for boost attack + damage,35
 "Sword, Great",Melee,,,,Great Weapon,0,6,,2-hand. Reach.,20
 "Sword-Cannon, Heavy",Melee,,,,Hand Weapon,-1,3,,,150
 "Sword-Cannon, Repeating",Melee,,,,Hand Weapon,-1,3,,,100
