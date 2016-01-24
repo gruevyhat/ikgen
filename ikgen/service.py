@@ -28,8 +28,8 @@ def display_character():
     A = {}
     for k, v in request.query.items():
         A.update({k: parse_arg(v)})
-    c = Character(**A)
-    return "<pre>"+c.summary()+"</pre>"
+    c = Character(**A).summary()
+    return "<pre>"+c+"</pre>"
 
 
 def start_service(host='localhost', port='8080'):
