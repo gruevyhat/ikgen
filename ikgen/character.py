@@ -17,7 +17,7 @@ import json
 import pandas as pd
 import numpy as np
 from random import choice
-from collections import defaultdict
+from collections import defaultdict, Counter
 from fdfgen import forge_fdf
 
 
@@ -86,6 +86,10 @@ def title_caps(text):
     return ''.join([c.upper() if i == 0 else c.lower()
                     for i, c in enumerate(list(text))])
 
+
+def combine_values(L):
+    return ', '.join(["%s (x%d)" % (k, v)
+                      for k, v in Counter(L).items()])
 
 class CharData(object):
     careers = pd.read_csv(os.path.join(SCRIPTDIR, "data", "careers.csv"), encoding="utf8")
@@ -189,7 +193,7 @@ class Character(object):
         if self.spells:
             stats += ["Spells:\n" + self.spell_table.to_string(index=False)]
         if self.connections:
-            stats += ["Connections: " + ", ".join(self.connections)]
+            stats += ["Connections: " + combine_values(self.connections)]
         if self.assets:
             stats += ["Assets: " + ", ".join(self.assets)]
         stats += ["GC: " + str(self.money)]
@@ -288,9 +292,9 @@ class Character(object):
         # Choose careers
         for i in range(2):
             try:
-                self._incr_career(self.careers[i])
+                self._add_career(self.careers[i])
             except:
-                self._incr_career()
+                self._add_career()
         # Handle bonus benefits
         self.benefits += [b for b in self.career_table['Benefit Bonus'].tolist()
                           if b != '-']
@@ -303,7 +307,7 @@ class Character(object):
             for i in range(len(self.stat_table)):
                 self.stat_table[k].iat[i] += v
 
-    def _incr_career(self, career=None):
+    def _add_career(self, career=None):
         if career:
             new_career = self.data.careers[self.data.careers.Career == career]
         else:
@@ -314,7 +318,7 @@ class Character(object):
         if restr and set(self.careers) \
                 .difference(new_career.Career.tolist()) \
                 .difference(restr):
-            self._incr_career()
+            self._add_career()
         else:
             basename = new_career.Career.any().split()[0]
             self.career_mask &= ~self.data.careers.Career \
@@ -349,11 +353,11 @@ class Character(object):
             self.stats['ARC'] = 2
         stat_sum = sum(self.stats.values())
         while sum(self.stats.values()) < stat_sum + 3:
-            self._incr_stat()
+            self._add_stat()
         if self.fixed_stats:
             self.stats.update(self.fixed_stats)
 
-    def _incr_stat(self):
+    def _add_stat(self):
         stat = choice_geom(self.archetype_table['Stat Order'].any().split(", "),
                            float(self.archetype_table['p']))
         limit = self.stat_table[self.stat_table.Set == self.level][stat] \
@@ -361,7 +365,7 @@ class Character(object):
         if self.stats[stat] < limit:
             self.stats[stat] += 1
         else:
-            self._incr_stat()
+            self._add_stat()
 
     def _calc_derived_stats(self):
         self.stats[u'DEF'] = sum(self.stats[s] for s in ['AGL', 'SPD', 'PER'])
@@ -470,7 +474,7 @@ class Character(object):
             if self.stats['ARC'] < limit:
                 self.stats['ARC'] += 1
             else:
-                self._incr_stat()
+                self._add_stat()
 
     def apply_xp(self, xp=None):
         if xp >= 50:
@@ -480,38 +484,38 @@ class Character(object):
         self.xp, occ, sacm, stat, ben, ben_or_car = self.data.xp.loc[xp].tolist()
         if occ > 0:
             for _ in range(occ):
-                self._incr_occ()
+                self._add_occ()
         if sacm > 0:
             for _ in range(sacm):
-                sacm_fncs = {0: self._incr_abil,
-                             1: self._incr_conn,
-                             2: self._incr_mil}
+                sacm_fncs = {0: self._add_abil,
+                             1: self._add_conn,
+                             2: self._add_mil}
                 if self.spells \
                         and len(self.spell_table) < 2 * self.stats['INT']:
-                    sacm_fncs.update({3: self._incr_spell})
+                    sacm_fncs.update({3: self._add_spell})
                 sacm_fncs[choice(range(len(sacm_fncs)))]()
         if stat > 0:
             for _ in range(stat):
-                self._incr_stat()
+                self._add_stat()
         if ben > 0:
             for _ in range(ben):
-                self._incr_ben()
+                self._add_ben()
         if ben_or_car > 0:
             if choice(range(2)) == 0:
-                self._incr_career()
-                self._incr_occ()
-                self._incr_occ()
+                self._add_career()
+                self._add_occ()
+                self._add_occ()
             else:
-                self._incr_ben()
+                self._add_ben()
         self._calc_derived_stats()
 
-    def _incr_ben(self):
+    def _add_ben(self):
         benefits = self.data.benefits[self.data.benefits.Archetype == self.archetype]
         new_benefit = benefits[~benefits.Benefit.isin(self.benefits)].sample()
         self.benefit_table = pd.concat([self.benefit_table, new_benefit])
         self.benefits = self.benefit_table.Benefit.tolist()
 
-    def _incr_spell(self):
+    def _add_spell(self):
         spell_lists = [l for l in
                        self.career_table['All Sp'].apply(lambda x: x.split(", ")).sum()
                        if l != "-"]
@@ -525,7 +529,7 @@ class Character(object):
         self.spell_table = pd.concat([self.spell_table,
                                       self.data.spells[self.data.spells.Spell == new_spell]])
 
-    def _incr_abil(self):
+    def _add_abil(self):
         all_abils = self.career_table['All Abilities'] \
             .apply(lambda x: x.split(", ")).sum()
         new_abil = choice([a for a in all_abils if a not in
@@ -533,11 +537,11 @@ class Character(object):
         self.ability_table = pd.concat([self.ability_table,
                                         self.data.abilities[self.data.abilities.Ability == new_abil]])
 
-    def _incr_conn(self):
+    def _add_conn(self):
         conns = self.career_table['All Conns'].apply(lambda x: x.split(', ')).sum()
         self.connections += [choice(conns)]
 
-    def _incr_occ(self):
+    def _add_occ(self):
         skill_limits = maxdict(self.career_table["All Occ"]
                                .apply(parse).tolist() + [self.skills_occ])
         skill = choice(skill_limits.keys())
@@ -547,9 +551,9 @@ class Character(object):
                 skill = choice(GENERAL_SKILLS)
             self.skills_occ[skill] += 1
         else:
-            self._incr_occ()
+            self._add_occ()
 
-    def _incr_mil(self):
+    def _add_mil(self):
         skill_limits = maxdict(self.career_table["All Military"]
                                .apply(parse).tolist() + [self.skills_mil])
         skill = choice(skill_limits.keys())
@@ -557,7 +561,7 @@ class Character(object):
                                         LEVELS[self.level]):
             self.skills_mil[skill] += 1
         else:
-            self._incr_mil()
+            self._add_mil()
 
     def write_fdf(self):
         fields = [('Name', 'John Smith'), ('Sex', 'Male')]
