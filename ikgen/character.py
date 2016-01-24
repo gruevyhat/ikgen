@@ -141,7 +141,7 @@ class Character(object):
     def __init__(self, race=None, stats={},
                  archetype=None, benefits=[],
                  careers=[], spells=[], abilities=[],
-                 connections=[], money=0,
+                 connections=None, money=0,
                  assets=[], xp=0, chardata=None):
         self.race = race
         self.archetype = archetype
@@ -151,7 +151,7 @@ class Character(object):
         self.spells = spells
         self.money = money
         self.assets = assets
-        self.connections = connections
+        self.connections = connections or []
         self.abilities = abilities
         self.level = 'Hero'
         self.data = chardata or CharData()
@@ -387,8 +387,7 @@ class Character(object):
         conns = [c for c in
                  self.career_table['Starting Conns'].tolist()
                  if c != 'None']
-        if conns:
-            self.connections = self.connections + conns
+        self.connections += conns
 
     def _gen_assets(self):
         assets = [a for a in
@@ -538,8 +537,15 @@ class Character(object):
                                         self.data.abilities[self.data.abilities.Ability == new_abil]])
 
     def _add_conn(self):
-        conns = self.career_table['All Conns'].apply(lambda x: x.split(', ')).sum()
-        self.connections += [choice(conns)]
+        self.conns = self.career_table['All Conns'].apply(lambda x: x.split(', ')).sum()
+        new_conn = choice(self.conns)
+        if new_conn != "None":
+            self.connections += [new_conn]
+        else:
+            if choice(range(2)) == 0:
+                self._add_occ()
+            else:
+                self._add_mil()
 
     def _add_occ(self):
         skill_limits = maxdict(self.career_table["All Occ"]
