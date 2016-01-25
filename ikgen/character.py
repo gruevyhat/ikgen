@@ -411,7 +411,7 @@ class Character(object):
                                              & (self.data.weapons.Cost != 9999)
                                              & (self.data.weapons.Cost <= self.money)].tolist()
             avail = list(set(avail).difference(weaps))
-            new_weapon = choice_geom(avail)
+            new_weapon = choice_geom(avail, 0.5)
             weaps += [new_weapon]
             self.money -= self.data.weapons[self.data.weapons.Weapon == new_weapon].Cost.tolist()[0]
         self.weap_table = self.data.weapons[self.data.weapons.Weapon.isin(weaps)]
