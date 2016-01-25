@@ -1,168 +1,167 @@
 Weapon,Type,Ammo,Eff Rng,Ex Rng,Skill,Att Mod,POW,AOE,Special Rules,Cost
-Assault Kommando Flamethrower,Ranged,10,SP8,–,Light Artillery,0,12,-,"Char -1SPD & DEF, target suffer Cont fire effect",50
-"Axe, Throwing",Ranged,–,"6""",–,Thrown Weapon,0,3,-,Add STR to POW.  Can be used in melee.,12
-Blowtorch,Ranged,10 Turns,".5""",–,Pistol,-1,10,-,Fire Dmg. Crit Fire Continuous. Pg 60 NQ45,15
-Blunderbuss,Ranged,1 heavy,8”,40”,Rifle,-1,12,-,-2 weapon mod if fired one-handed,30
-Bola,Ranged,–,8”,–,Thrown Weapon,-2,0,-,add the throwers STR to POW.,5
-Bomb Lance,Ranged,1 Harpoon,"8""","40""",Light Artillery,-2,12,-,"On hit place 3"" AOE on tar. all hit take pow 6 dmg",30
-Bombardier Grenade Cannon,Ranged,1,"10""","50""",Light Artillery,-1,14,3,"STR 7, 2hand only",300
 Bow,Ranged,1,10”,50”,Archery,0,10,-,Requires 2 hands,20
 "Bow, Great",Ranged,1,"10""","50""",Archery,0,12,-,Requires 2 hand. STR of 6 to use.,45
-"Cannon, Light",Ranged,1 heavy,"15""","75""",Light Artillery,0,13,3,"see p. 95 Kings, Nations and Gods",170
-"Cannon, Royal Weight-Canistor Shot",Ranged,1 heavy,SP10,-,Heavy Artillery,0,14,-,,700
-"Cannon, Royal Weight-Cannonball",Ranged,1 heavy,"20""","100""",Heavy Artillery,-2,18,-,"regardless of base size char slammed d6"", Collateral damage is POW18.",700
-"Cannon, Royal Weight-Chain shot",Ranged,1 heavy,"14""",-,Heavy Artillery,-4,14,4,causes knockdown,700
-"Cannon, Royal Weight-Incendiary Shot",Ranged,1 heavy,"20""","100""",Heavy Artillery,-2,14,4,Fire Continuous effect,700
-"Cannon-Axe, Man-O-War",Ranged,1 heavy,8”,40”,Light Artillery,-1,14,-,STR 7,45
-Cannon-Shield,Ranged,1 heavy,8”,40”,Rifle,-2,12,-,see p. 262,45
-"Cannon-Shield, Man-O-War",Ranged,1 heavy,"6""",-,Light Artillery,-1,14,-,"STR 7, +1 ARM",110
-Carbine,Ranged,5 MCLR,10”,"50""",Rifle,0,10,-,see p. 262,60
-Chain Gun,Ranged,30,10”,"50""",Light Artillery,0,10,-,"Requires 2H, See p94 Kings, Nations and Gods",180
+Nyss Bow,Ranged,1,12”,60”,Archery,0,10,-,Requires 2 hand. STR 5 to use.,35
 Crossbow,Ranged,1,"10""","50""",Crossbow,0,12,-,-2 weapon mod if fired one-handed,20
 "Crossbow, Lawbringer",Ranged,10,"10""","50""",Crossbow,-1,10,-,requires 2 hands,45
 "Crossbow, Repeating",Ranged,6,"10""","50""",Crossbow,-1,10,-,Requires 2 hands,30
-Crucible Arms Model 603,Ranged,8,"10""","50""",Rifle,0,11,-,STR 6,225
-Deck Gun,Ranged,1,"14""","70""",Light Artillery,0,13,3,"2hands, char -2SPD & DEF",150
-Dual Magelock Pistol,Ranged,2,"10""","50""",Pistol,0,10,-,KNG 244,280
-Dueling Pistols,Ranged,1 Light,"10""","50""",Pistol,0,10,-,+1 to attack if shooting custom round,100
-Field Gun,Ranged,1,"16""","80""",Light Artillery,0,14,-,"2 handed, tripod mounted, char -2SPD",120
-Fire Bomb,Ranged,1,"5""",-,Thrown Weapon,-2,12,3,"1 quick & attack action to use, Crit: fire continuous effect",8
-Flare Pistol,Ranged,1 Flare,"6 ""","30""",Pistol,-3,*,*,See Pg 62 NQ45,25
-"Grenade, Concussion",Ranged,–,8”,–,Thrown Weapon,0,–,3,see p. 263,20
-"Grenade, Explosive",Ranged,–,8”,–,Thrown Weapon,0,12,3,see p. 264,10
-"Grenade, Smoke",Ranged,–,8”,–,Thrown Weapon,0,–,3,see p. 264,5
-"Grenade, Strangle Gas",Ranged,–,8”,–,Thrown Weapon,0,–,3,see p. 264,20
-Gun Axe,Ranged,1 heavy,8”,40”,Rifle,-1,12,-,See p. 264 and 265.,80
-Hand Cannon,Ranged,1 heavy,12”,60”,Pistol,0,12,-,,100
-"Hand Cannon, Dual",Ranged,2 Heavy,12”,60”,Pistol,0,12,-,see p. 265.,250
-Harpoon Gun,Ranged,1 *,"10""",20”,Rifle,-2,12,-,see p. 265.,35
-Injection Pistol,Ranged,1 Injector,"4""",-,Pistol,-2,8,-,See FMF 1.2.2,125
-Javelin,Ranged,–,8”,–,Thrown Weapon,0,3,-,Add STR to POW.,5
-"Knife, Throwing",Ranged,–,8”,–,Thrown Weapon,0,2,-,Add STR to POW.  Can be used in melee.,8
-"Lance, Electro",Ranged,Spec,"4""",–,POI,0,12,-,Electrical.  Character takes POW 12 electrical.,0
-Linethrower,Ranged,1,"4""","20""",Light Artillery,-2,10,-,See Pg 64 NQ45,40
-Magelock Pistol,Ranged,1 *,"10""","50""",Pistol,0,10,-,See p. 267,150
-Magelock Rifle,Ranged,1 *,"14""","70""",Rifle,0,10,-,-2 weapon mod if fired one-handed. Requires 2 hands.,200
-Mini-Slugger,Ranged,30,"10""","50""",Light Artillery,-1,11,-,"See p 96 Kings, Nations and Gods",250
-Mortar,Ranged,1,"20""","100""",Light Artillery,-4,16,4,"Min rng 8"", 2H, Char -2SPD & DEF, see p 187 KNG",120
-Nyss Bow,Ranged,1,12”,60”,Archery,0,10,-,Requires 2 hand. STR 5 to use.,35
-Ogrun Battle Cannon,Ranged,1 *,12”,60”,Rifle,-1,12,3,-2 weapon mod if fired one-handed,85
-"Pen, Grenade-Acid",Ranged,-,"5""",-,Thrown Weapon,-2,8,-,Continous,25
-"Pen, Grenade-Explosive",Ranged,-,"5""",-,Thrown Weapon,-2,10,-,,20
-"Pen, Grenade-Knockout",Ranged,-,"5""",-,Thrown Weapon,-2,-,-,"KO, tets 14 vs PHY",35
-"Pen, Shot",Ranged,1,"2""",-,Pistol,-2,8,-,see KNG245,25
-Pistol,Ranged,1 Light,8”,20”,Pistol,0,10,-,,20
-Pistol (Repeating),Ranged,5 Light,8”,40”,Pistol,0,10,-,See p. 267,35
-"Pistol, Collapsible",Ranged,1 Light,7”,"35""",Pistol,-1,10,-,See p.13 Urban Adventure,45
-"Pistol, Execrator",Ranged,2 Heavy,"8""","40""",Pistol,0,11,-,"See p 95 Kings, Nations and Gods",45
-"Pistol, Holdout",Ranged,1,4”,–,Pistol,1,8,-,,15
-Purifier,Ranged,8,SP8,-,Light Artillery,0,12,-,see p 367 KNG,75
-Quad-Iron,Ranged,4 light,"10""","50""",Pistol,-1,10,-,See p. 267,200
-Radcliffe Carbine,Ranged,5*,13”,65”,Rifle,0,11,-,-2 weapon mod if fired one-handed,250
-Radcliffe Firestorm,Ranged,5*,"8""","40""",Pistol,-1,12,-,"See p.96 Kings, Nations and Gods",240
-Rifle (Collapsible),Ranged,1 heavy,"10""","50""",Rifle,-1,11,-,See p.14 Urban Adventure,115
-Rifle (Heavy),Ranged,1,"14""","70""",Rifle,0,12,-,Requires 2 hands,120
-Rifle (Long),Ranged,1 Light,"14""","70""",Rifle,0,10,-,Requires 2 hands,50
-Rifle (Military),Ranged,1,"10""","50""",Rifle,0,11,-,Requires 2 hands,45
-Rifle (Repeating),Ranged,5 Light,"14""","70""",Rifle,0,10,-,Requires 2 hands,80
-Rivet Gun,Ranged,10 Rivets,"4""",-,Pistol,-2,10,-,Waterlogged won't fire,81
-Rockbreaker Spray,Ranged,6,SP 6,-,Light Artillery,-2,10,-,Corr. Dmg. Corr. Cont. Full Rules Pg65 NQ45,80
-Rocket Tube,Ranged,1,"14""","70""",Light Artillery,0,12,3,"STR 6, char -1SPD & DEF, -2 not crouching",30
-Rynnish Walking Stick,Ranged,1 Light,8”,40”,Rifle,0,10,-,-2 weapon mod if fired one-handed.  PER + Detection to detect not normal stick.,40
-Scattergun,Ranged,1 *,SP 8,–,Rifle,0,12,-,-2 weapon mod if fired one-handed,40
-Skyhammer,Ranged,1,"16""",-,Light Artillery,-4,12,3,see p 367 KNG,30
-Sling,Ranged,1,"10""",–,Thrown Weapon,-2,8,-,See p. 270,5
-Slug Gun,Ranged,1 *,4”,–,Pistol,-1,14,-,-2 weapon mod if fired one-handed,40
-Slugger,Ranged,30,"10""","50""",Light Artillery,-1,13,-,"See p.96 Kings, Nations and Gods",310
-Storm Glaive,Ranged,Spec,"4""",–,POI,0,12,-,Electrical.  Character takes POW 12 electrical.,0
-"Sword-Cannon, Heavy",Ranged,1 heavy,"10""","50""",Rifle,-1,12,-,See p. 270 and 271,150
-"Sword-Cannon, Repeating",Ranged,5 MCLR,"10""","50""",Rifle,-1,10,-,See p. 270,100
-Vislovski Carbine,Ranged,5,"10""","50""",Rifle,0,10,-,"Atk -2 as grenade launcher, see P 188 KNG",110
-Annihilator Blade,Melee,,,,Great Weapon,0,5,,"Reach, STR 7.",10
-Assassin's Blade,Melee,,,,Hand Weapon,-1,4,,Add +2 to back strike damage,10
-Axe,Melee,,,,Hand Weapon,0,3,,-,8
-"Axe, Great",Melee,,,,Great Weapon,0,6,,Crit: +die damage.  STR 5.  2-Handed.,25
-"Axe, Horseman's",Melee,,,,Hand Weapon,0,5,,Reach.  Bonus for mounted. -1A/POW3 on foot.,20
-Bayonet (Pistol),Melee,,,,Hand Weapon,-1,2,,Can be used as a dagger.  See rules.,5
+Staff,Melee,,,,Great Weapon,0,3,,Reach. 2-hand. Feat: Trip attack.,5
 Bayonet (Rifle),Melee,,,,Great Weapon,-1,3,,Reach. Can be used as a dagger.  See rules.,5
-Blast Shield,Melee,,,,Shield,-1,1,,"Add Shield Skill to ARM -2 DEF, Imn. Blast Dmg",45
-Blasting Lance,Melee,,,,Lance,0,10,,"Atk -2 & POW 4 not charging, See p184 KNG",125
+"Club, Banded",Melee,,,,Great Weapon,-1,4,,Crit: Living can be KO'd.  STR 5.,6
+Spear,Melee,,,,Great Weapon,-1,5,,1-hand: POW 4. Reach with 2-hand.,15
+Maul,Melee,,,,Great Weapon,0,6,,STR 5. 2-hand. Crit: Feat for Slam.,20
+"Sword, Great",Melee,,,,Great Weapon,0,6,,2-hand. Reach.,20
+"Gaff, Spear",Melee,,,,Great Weapon,-1,4,,"Reach while 2H, 1 feat point to make trip attack, success = Knock Down",20
+War Hammer,Melee,,,,Great Weapon,-1,5,,STR 6 for 1-hand. Crit: Living can be KO'd.,20
+"Axe, Great",Melee,,,,Great Weapon,0,6,,Crit: +die damage.  STR 5.  2-Handed.,25
+Halberd,Melee,,,,Great Weapon,0,5,,When used 1-hand: -1A/POW4. Reach.,25
+"Gaff, Pole",Melee,,,,Great Weapon,-1,4,,"Reach while 2H, Crit Knock Down",1
+"Staff, Battle",Melee,,,,Great Weapon,0,4,,Reach. 2-hand. Feat: Trip. Crit: Living can be KO'd.,12
+Railman's Adze,Melee,,,,Great Weapon,-2,7,,Req. STR 6 2H. -2 DEF after miss till next turn.,20
+"Flail, Two-Handed",Melee,,,,Great Weapon,-2,6,,Reach. 2-hand. Ignore ARM from shields.,25
+Spike Maul,Melee,,,,Great Weapon,-2,6,,STR 5. 2-hand. Crit: KD. -2 DEF after miss til next turn,25
+Caspian Battleblade,Melee,,,,Great Weapon,0,6,,When used 1-hand: -1A/POW4.  STR 5.,20
+"Spear, Flame",Melee,,,,Great Weapon,-1,5,,1-hand: POW 4. Reach with 2-hand. 1 point fire damage. 366KNG,30
 Blasting Pike,Melee,,,,Great Weapon,-2,7,,"Crit: KD, Reach.  See rules.",50
 "Cannon-Axe, Man-O-War",Melee,,,,Great Weapon,0,6,,,300
-Cannon-Shield,Melee,,,,Shield,0,0,,Bonus to ARM equal to Shield Skill.,45
-"Cannon-Shield, Man-O-War",Melee,,,,Shield,-1,1,,Bonus to ARM equal to Shield Skill.,110
-Caspian Battleblade,Melee,,,,Great Weapon,0,6,,When used 1-hand: -1A/POW4.  STR 5.,20
-Cat's Paw,Melee,,,,Hand Weapon,-1,2,,See NQ45 pg 62,6
-Charged Spear,Melee,,,,Great Weapon,-1,5,,"Unless Immune: Elec, Tar hit pushed 1"" dir away unless & Crit KD",785
-Clockwork Injector,Melee,,,,Hand Weapon,-2,-,,See p. 12 Urban Adventures,50
-Club,Melee,,,,Hand Weapon,0,2,,Crit: Living can be KO'd.,3
-"Club, Banded",Melee,,,,Great Weapon,-1,4,,Crit: Living can be KO'd.  STR 5.,6
-Cutlass,Melee,,,,Hand Weapon,-1,4,,-,15
-Dagger,Melee,,,,Hand Weapon,1,1,,-,5
-"Dagger, Poisoner",Melee,,,,Hand Weapon,1,1,,KNG 241,20
-Deadblow Hammer,Melee,,,,Hand Weapon,-1,3,,Feat Pt gain adtl die vs KD tar. +1 Craft(MW),15
-Dueling Buckler,Melee,,,,Hand Weapon,-1,0,,+1 ARM vs Melee attacks in front arc if not used to attack that turn,10
+Firebrand,Melee,,,,Great Weapon,-2,7,,"Crit: Continuous Fire effect, STR 5",9999
+Annihilator Blade,Melee,,,,Great Weapon,0,5,,"Reach, STR 7.",10
 Durkin Bar,Melee,,,,Great Weapon,-2,5,,Req. STR 5 2H. FMF 1.3.1 for full rules,15
-Entrenching Tool,Melee,,,,Hand Weapon,-1,3,,Counts as a Spade,15
-Fell Blade,Melee,,,,Great Weapon,0,6,,"2-hand, Reach, Magic, Rules NQ46 30",-1
-Firebrand,Melee,,,,Great Weapon,-2,7,,"Crit: Continuous Fire effect, STR 5",-1
-Flail,Melee,,,,Hand Weapon,-1,4,,Ignore ARM from bucklers/shields.,15
-"Flail, Two-Handed",Melee,,,,Great Weapon,-2,6,,Reach. 2-hand. Ignore ARM from shields.,25
-"Gaff, Hand",Melee,,,,Hand Weapon,0,2,,-,1
-"Gaff, Pole",Melee,,,,Great Weapon,-1,4,,"Reach while 2H, Crit Knock Down",1
-"Gaff, Spear",Melee,,,,Great Weapon,-1,4,,"Reach while 2H, 1 feat point to make trip attack, success = Knock Down",20
-Garrote,Melee,,,,Unarmed Combat,0,-,,KNG241,2
-"Garrote, Clockwork",Melee,,,,Unarmed Combat,0,-,,KNG242,15
-Gun Axe,Melee,,,,Hand Weapon,-1,3,,Can be used as a gun,80
-Halberd,Melee,,,,Great Weapon,0,5,,When used 1-hand: -1A/POW4. Reach.,25
-Halberd (Consecrated),Melee,,,,Great Weapon,0,5,,Reach. See p 365 KNG,-1
-Halberd (Voltaic),Melee,,,,Great Weapon,1,6,,"Arc lighting 4"",  POW 10.",1110
-Hand Pick,Melee,,,,Hand Weapon,-1,2,,Feat pt gain adtl die vs KD & Prone  tar.,5
-Ice Axe,Melee,,,,Hand Weapon,0,2,,+1 Climbing while on snow or ice,5
-Ice Maul,Melee,,,,Great Weapon,0,5,,"STR 7, 2H only, Reach, Booted Dam vs char without cold Immunity",910
-'Jack Wrench,Melee,,,,Hand Weapon,-2,3,,Critical KO. See Pg 274,10
-Knuckledusters,Melee,,,,Unarmed Combat,0,1,,Special rules with knockout strike.,5
-Kopis,Melee,,,,Hand Weapon,-1,3,,+2 to charge attack rolls.  Crit: 1 Feat=Extra die.,15
-Lacerator,Melee,,,,Hand Weapon,-3,4,,Reach. Crit KD. Full rules FMF 1.1.2,-1
-Lance,Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted.,15
-Lance (Blessed),Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted. See 365 KNG,-1
-Lance (Electro),Melee,,,,Lance,0,7,,Reach. STR 5. Only charge attacks and mounted. +2 POW on charge while mounted.,1760
-Mace,Melee,,,,Hand Weapon,-1,4,,Crit: Living can be KO'd.,15
-Maul,Melee,,,,Great Weapon,0,6,,STR 5. 2-hand. Crit: Feat for Slam.,20
-Mechanoflail,Melee,,,,Hand Weapon,-1,5,,"Ignore Shields, Feat. Adtl. Atk vs same target. Rewind after 10 atks",200
+Telescoping Staff (Extended),Melee,,,,Great Weapon,0,4,,Qk. Act. to extend. Reach. Feat. Trip Attack,25
 Nyss Claymore,Melee,,,,Great Weapon,0,6,,2-hand. Feat: Boost Attack Roll.,30
 Ogrun Warcleaver,Melee,,,,Great Weapon,-1,6,,Reach. STR 6. 2-hand.,30
-"Pen, Blade",Melee,,,,Hand Weapon,0,1,,see KNG242,15
-"Pen, Poison",Melee,,,,Hand Weapon,0,-2,,see KNG242,25
-Pickaxe,Melee,,,,Hand Weapon,-1,4,,"Against KD target, Feat: Extra Damage Die.",15
-Railman's Adze,Melee,,,,Great Weapon,-2,7,,Req. STR 6 2H. -2 DEF after miss till next turn.,20
-Rapier,Melee,,,,Hand Weapon,0,2,,Feat: Boost Attack and Damage.,15
 Reclaimant Torch,Melee,,,,Great Weapon,-1,4,,"Reach, 1 point fire damage & continuous fire effect",30
-Relic Blade,Melee,,,,Great Weapon,0,5,,Magical Weapon for a menite,-1
-Rynnish Fan,Melee,,,,Hand Weapon,1,1,,,20
-Shield,Melee,,,,Shield,0,0,,Bonus to ARM equal to Shield Skill.,20
-"Shield, Combat",Melee,,,,Shield,-1,3,,Bonus to ARM equal to Shield Skill.,35
-Spear,Melee,,,,Great Weapon,-1,5,,1-hand: POW 4. Reach with 2-hand.,15
-"Spear, Flame",Melee,,,,Great Weapon,-1,5,,1-hand: POW 4. Reach with 2-hand. 1 point fire damage. 366KNG,30
-Spike Maul,Melee,,,,Great Weapon,-2,6,,STR 5. 2-hand. Crit: KD. -2 DEF after miss til next turn,25
-Springblade,Melee,,,,Hand Weapon,0,1,,Draw without using Quick Action.,12
-Staff,Melee,,,,Great Weapon,0,3,,Reach. 2-hand. Feat: Trip attack.,5
-"Staff, Battle",Melee,,,,Great Weapon,0,4,,Reach. 2-hand. Feat: Trip. Crit: Living can be KO'd.,12
-"Staff, Orgoth",Melee,,,,Great Weapon,0,6,,"1h -2 , See p 185 Kings, Nations, Gods",-1
-Storm Glaive,Melee,,,,Great Weapon,-1,7,,When used 1-hand: -2A/POW5.  Special rules.,1560
+Charged Spear,Melee,,,,Great Weapon,-1,5,,"Unless Immune: Elec, Tar hit pushed 1"" dir away unless & Crit KD",785
+Ice Maul,Melee,,,,Great Weapon,0,5,,"STR 7, 2H only, Reach, Booted Dam vs char without cold Immunity",910
+Halberd (Voltaic),Melee,,,,Great Weapon,1,6,,"Arc lighting 4"",  POW 10.",1110
 Stormcaller and Lightning Rod,Melee,,,,Great Weapon,-1,3,,When used 1-hand: -2A.  Special rules.,1160
+Tuning Staff,Melee,,,,Great Weapon,0,5,,See NQ48 pg71,1485
+Storm Glaive,Melee,,,,Great Weapon,-1,7,,When used 1-hand: -2A/POW5.  Special rules.,1560
+Halberd (Consecrated),Melee,,,,Great Weapon,0,5,,Reach. See p 365 KNG,9999
+Relic Blade,Melee,,,,Great Weapon,0,5,,Magical Weapon for a menite,9999
+"Sword, Blazing",Melee,,,,Great Weapon,0,5,,"STR 5, see p 365 KNG",9999
+Fell Blade,Melee,,,,Great Weapon,0,6,,"2-hand, Reach, Magic, Rules NQ46 30",9999
+"Staff, Orgoth",Melee,,,,Great Weapon,0,6,,"1h -2 , See p 185 Kings, Nations, Gods",9999
+Club,Melee,,,,Hand Weapon,0,2,,Crit: Living can be KO'd.,3
+Dagger,Melee,,,,Hand Weapon,1,1,,-,5
+Hand Pick,Melee,,,,Hand Weapon,-1,2,,Feat pt gain adtl die vs KD & Prone  tar.,5
+Axe,Melee,,,,Hand Weapon,0,3,,-,8
 Sword,Melee,,,,Hand Weapon,0,3,,-,12
-"Sword, Blazing",Melee,,,,Great Weapon,0,5,,"STR 5, see p 365 KNG",-1
-"Sword, Cane",Melee,,,,Hand Weapon,0,2,,POW 0 as cane.,15
-"Sword, Dress",Melee,,,,Hand Weapon,1,1,,spedn 1 feat for boost attack + damage,35
-"Sword, Great",Melee,,,,Great Weapon,0,6,,2-hand. Reach.,20
-"Sword-Cannon, Heavy",Melee,,,,Hand Weapon,-1,3,,,150
-"Sword-Cannon, Repeating",Melee,,,,Hand Weapon,-1,3,,,100
-Telescoping Staff (Collapsed),Melee,,,,Hand Weapon,0,3,,Quick Action to extend,25
-Telescoping Staff (Extended),Melee,,,,Great Weapon,0,4,,Qk. Act. to extend. Reach. Feat. Trip Attack,25
+Rapier,Melee,,,,Hand Weapon,0,2,,Feat: Boost Attack and Damage.,15
+Flail,Melee,,,,Hand Weapon,-1,4,,Ignore ARM from bucklers/shields.,15
+Mace,Melee,,,,Hand Weapon,-1,4,,Crit: Living can be KO'd.,15
+Pickaxe,Melee,,,,Hand Weapon,-1,4,,"Against KD target, Feat: Extra Damage Die.",15
+"Gaff, Hand",Melee,,,,Hand Weapon,0,2,,-,1
+Bayonet (Pistol),Melee,,,,Hand Weapon,-1,2,,Can be used as a dagger.  See rules.,5
 Tounament Foil,Melee,,,,Hand Weapon,0,0,,Cannot reduce any health spiral aspect below 1,10
 Trench Knife,Melee,,,,Hand Weapon,0,2,,Can be used with Unarmed.,10
+Assassin's Blade,Melee,,,,Hand Weapon,-1,4,,Add +2 to back strike damage,10
+Dueling Buckler,Melee,,,,Hand Weapon,-1,0,,+1 ARM vs Melee attacks in front arc if not used to attack that turn,10
+"Sword, Cane",Melee,,,,Hand Weapon,0,2,,POW 0 as cane.,15
+Cutlass,Melee,,,,Hand Weapon,-1,4,,-,15
 Trench Sword,Melee,,,,Hand Weapon,-1,4,,Can be used with Unarmed.,15
+"Axe, Horseman's",Melee,,,,Hand Weapon,0,5,,Reach.  Bonus for mounted. -1A/POW3 on foot.,20
+"Sword, Dress",Melee,,,,Hand Weapon,1,1,,spedn 1 feat for boost attack + damage,35
+Deadblow Hammer,Melee,,,,Hand Weapon,-1,3,,Feat Pt gain adtl die vs KD tar. +1 Craft(MW),15
+Entrenching Tool,Melee,,,,Hand Weapon,-1,3,,Counts as a Spade,15
+Kopis,Melee,,,,Hand Weapon,-1,3,,+2 to charge attack rolls.  Crit: 1 Feat=Extra die.,15
+"Dagger, Poisoner",Melee,,,,Hand Weapon,1,1,,KNG 241,20
+Springblade,Melee,,,,Hand Weapon,0,1,,Draw without using Quick Action.,12
+"Sword-Cannon, Repeating",Melee,,,,Hand Weapon,-1,3,,,100
+"Sword-Cannon, Heavy",Melee,,,,Hand Weapon,-1,3,,,150
+Ice Axe,Melee,,,,Hand Weapon,0,2,,+1 Climbing while on snow or ice,5
+Cat's Paw,Melee,,,,Hand Weapon,-1,2,,See NQ45 pg 62,6
+Jack Wrench,Melee,,,,Hand Weapon,-2,3,,Critical KO. See Pg 274,10
+"Pen, Blade",Melee,,,,Hand Weapon,0,1,,see KNG242,15
+"Pen, Poison",Melee,,,,Hand Weapon,0,-2,,see KNG242,25
+Telescoping Staff (Collapsed),Melee,,,,Hand Weapon,0,3,,Quick Action to extend,25
+Clockwork Injector,Melee,,,,Hand Weapon,-2,-,,See p. 12 Urban Adventures,50
+Lacerator,Melee,,,,Hand Weapon,-3,4,,Reach. Crit KD. Full rules FMF 1.1.2,9999
+Rynnish Fan,Melee,,,,Hand Weapon,1,1,,,20
+Mechanoflail,Melee,,,,Hand Weapon,-1,5,,"Ignore Shields, Feat. Adtl. Atk vs same target. Rewind after 10 atks",200
 Tuning Kit,Melee,,,,Hand Weapon,-1,3,,See NQ48 pg70,735
-Tuning Staff,Melee,,,,Great Weapon,0,5,,See NQ48 pg71,1485
-War Hammer,Melee,,,,Great Weapon,-1,5,,STR 6 for 1-hand. Crit: Living can be KO'd.,20
+"Cannon, Royal Weight-Cannonball",Ranged,1 heavy,"20""","100""",Heavy Artillery,-2,18,-,"regardless of base size char slammed d6"", Collateral damage is POW18.",700
+"Cannon, Royal Weight-Canistor Shot",Ranged,1 heavy,SP10,-,Heavy Artillery,0,14,-,,700
+"Cannon, Royal Weight-Chain shot",Ranged,1 heavy,"14""",-,Heavy Artillery,-4,14,4,causes knockdown,700
+"Cannon, Royal Weight-Incendiary Shot",Ranged,1 heavy,"20""","100""",Heavy Artillery,-2,14,4,Fire Continuous effect,700
+Lance,Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted.,15
+Lance (Blessed),Melee,,,,Lance,0,8,,Reach. STR 5. Only charge attacks and mounted. See 365 KNG,9999
+Blasting Lance,Melee,,,,Lance,0,10,,"Atk -2 & POW 4 not charging, See p184 KNG",125
+Lance (Electro),Melee,,,,Lance,0,7,,Reach. STR 5. Only charge attacks and mounted. +2 POW on charge while mounted.,1760
+Mortar,Ranged,1,"20""","100""",Light Artillery,-4,16,4,"Min rng 8"", 2H, Char -2SPD & DEF, see p 187 KNG",120
+Field Gun,Ranged,1,"16""","80""",Light Artillery,0,14,-,"2 handed, tripod mounted, char -2SPD",120
+Deck Gun,Ranged,1,"14""","70""",Light Artillery,0,13,3,"2hands, char -2SPD & DEF",150
+"Cannon, Light",Ranged,1 heavy,"15""","75""",Light Artillery,0,13,3,"see p. 95 Kings, Nations and Gods",170
+Chain Gun,Ranged,30,10”,"50""",Light Artillery,0,10,-,"Requires 2H, See p94 Kings, Nations and Gods",180
+Mini-Slugger,Ranged,30,"10""","50""",Light Artillery,-1,11,-,"See p 96 Kings, Nations and Gods",250
+Slugger,Ranged,30,"10""","50""",Light Artillery,-1,13,-,"See p.96 Kings, Nations and Gods",310
+Rocket Tube,Ranged,1,"14""","70""",Light Artillery,0,12,3,"STR 6, char -1SPD & DEF, -2 not crouching",30
+Skyhammer,Ranged,1,"16""",-,Light Artillery,-4,12,3,see p 367 KNG,30
+"Cannon-Axe, Man-O-War",Ranged,1 heavy,8”,40”,Light Artillery,-1,14,-,STR 7,45
+"Cannon-Shield, Man-O-War",Ranged,1 heavy,"6""",-,Light Artillery,-1,14,-,"STR 7, +1 ARM",110
+Bombardier Grenade Cannon,Ranged,1,"10""","50""",Light Artillery,-1,14,3,"STR 7, 2hand only",300
+Bomb Lance,Ranged,1 Harpoon,"8""","40""",Light Artillery,-2,12,-,"On hit place 3"" AOE on tar. all hit take pow 6 dmg",30
+Linethrower,Ranged,1,"4""","20""",Light Artillery,-2,10,-,See Pg 64 NQ45,40
+Assault Kommando Flamethrower,Ranged,10,SP8,–,Light Artillery,0,12,-,"Char -1SPD & DEF, target suffer Cont fire effect",50
+Purifier,Ranged,8,SP8,-,Light Artillery,0,12,-,see p 367 KNG,75
+Rockbreaker Spray,Ranged,6,SP 6,-,Light Artillery,-2,10,-,Corr. Dmg. Corr. Cont. Full Rules Pg65 NQ45,80
+"Pistol, Holdout",Ranged,1,4”,–,Pistol,1,8,-,,15
+Pistol,Ranged,1 Light,8”,20”,Pistol,0,10,-,,20
+Pistol (Repeating),Ranged,5 Light,8”,40”,Pistol,0,10,-,See p. 267,35
+Slug Gun,Ranged,1 *,4”,–,Pistol,-1,14,-,-2 weapon mod if fired one-handed,40
+Hand Cannon,Ranged,1 heavy,12”,60”,Pistol,0,12,-,,100
+"Pen, Shot",Ranged,1,"2""",-,Pistol,-2,8,-,see KNG245,25
+Flare Pistol,Ranged,1 Flare,"6 ""","30""",Pistol,-3,*,*,See Pg 62 NQ45,25
+"Pistol, Collapsible",Ranged,1 Light,7”,"35""",Pistol,-1,10,-,See p.13 Urban Adventure,45
+Rivet Gun,Ranged,10 Rivets,"4""",-,Pistol,-2,10,-,Waterlogged won't fire,81
+Dueling Pistols,Ranged,1 Light,"10""","50""",Pistol,0,10,-,+1 to attack if shooting custom round,100
+Magelock Pistol,Ranged,1 *,"10""","50""",Pistol,0,10,-,See p. 267,150
+Quad-Iron,Ranged,4 light,"10""","50""",Pistol,-1,10,-,See p. 267,200
+"Hand Cannon, Dual",Ranged,2 Heavy,12”,60”,Pistol,0,12,-,see p. 265.,250
+Blowtorch,Ranged,10 Turns,".5""",–,Pistol,-1,10,-,Fire Dmg. Crit Fire Continuous. Pg 60 NQ45,15
+"Pistol, Execrator",Ranged,2 Heavy,"8""","40""",Pistol,0,11,-,"See p 95 Kings, Nations and Gods",45
+Injection Pistol,Ranged,1 Injector,"4""",-,Pistol,-2,8,-,See FMF 1.2.2,125
+Radcliffe Firestorm,Ranged,5*,"8""","40""",Pistol,-1,12,-,"See p.96 Kings, Nations and Gods",240
+Dual Magelock Pistol,Ranged,2,"10""","50""",Pistol,0,10,-,KNG 244,280
+"Lance, Electro",Ranged,Spec,"4""",–,POI,0,12,-,Electrical.  Character takes POW 12 electrical.,0
+Storm Glaive,Ranged,Spec,"4""",–,POI,0,12,-,Electrical.  Character takes POW 12 electrical.,0
+Blunderbuss,Ranged,1 heavy,8”,40”,Rifle,-1,12,-,-2 weapon mod if fired one-handed,30
+Rifle (Military),Ranged,1,"10""","50""",Rifle,0,11,-,Requires 2 hands,45
+Rifle (Long),Ranged,1 Light,"14""","70""",Rifle,0,10,-,Requires 2 hands,50
+Carbine,Ranged,5 MCLR,10”,"50""",Rifle,0,10,-,see p. 262,60
+Rifle (Repeating),Ranged,5 Light,"14""","70""",Rifle,0,10,-,Requires 2 hands,80
+Rifle (Heavy),Ranged,1,"14""","70""",Rifle,0,12,-,Requires 2 hands,120
+Harpoon Gun,Ranged,1 *,"10""",20”,Rifle,-2,12,-,see p. 265.,35
+Scattergun,Ranged,1 *,SP 8,–,Rifle,0,12,-,-2 weapon mod if fired one-handed,40
+Rynnish Walking Stick,Ranged,1 Light,8”,40”,Rifle,0,10,-,-2 weapon mod if fired one-handed.  PER + Detection to detect not normal stick.,40
+Cannon-Shield,Ranged,1 heavy,8”,40”,Rifle,-2,12,-,see p. 262,45
+Magelock Rifle,Ranged,1 *,"14""","70""",Rifle,0,10,-,-2 weapon mod if fired one-handed. Requires 2 hands.,200
+Crucible Arms Model 603,Ranged,8,"10""","50""",Rifle,0,11,-,STR 6,225
+Radcliffe Carbine,Ranged,5*,13”,65”,Rifle,0,11,-,-2 weapon mod if fired one-handed,250
+Gun Axe,Ranged,1 heavy,8”,40”,Rifle,-1,12,-,See p. 264 and 265.,80
+Ogrun Battle Cannon,Ranged,1 *,12”,60”,Rifle,-1,12,3,-2 weapon mod if fired one-handed,85
+"Sword-Cannon, Repeating",Ranged,5 MCLR,"10""","50""",Rifle,-1,10,-,See p. 270,100
+Vislovski Carbine,Ranged,5,"10""","50""",Rifle,0,10,-,"Atk -2 as grenade launcher, see P 188 KNG",110
+Rifle (Collapsible),Ranged,1 heavy,"10""","50""",Rifle,-1,11,-,See p.14 Urban Adventure,115
+"Sword-Cannon, Heavy",Ranged,1 heavy,"10""","50""",Rifle,-1,12,-,See p. 270 and 271,150
+Shield,Melee,,,,Shield,0,0,,Bonus to ARM equal to Shield Skill.,20
+"Shield, Combat",Melee,,,,Shield,-1,3,,Bonus to ARM equal to Shield Skill.,35
+Cannon-Shield,Melee,,,,Shield,0,0,,Bonus to ARM equal to Shield Skill.,45
+Blast Shield,Melee,,,,Shield,-1,1,,"Add Shield Skill to ARM -2 DEF, Imn. Blast Dmg",45
+"Cannon-Shield, Man-O-War",Melee,,,,Shield,-1,1,,Bonus to ARM equal to Shield Skill.,110
+"Knife, Throwing",Ranged,–,8”,–,Thrown Weapon,0,2,-,Add STR to POW.  Can be used in melee.,8
+"Axe, Throwing",Ranged,–,"6""",–,Thrown Weapon,0,3,-,Add STR to POW.  Can be used in melee.,12
+Javelin,Ranged,–,8”,–,Thrown Weapon,0,3,-,Add STR to POW.,5
+"Grenade, Smoke",Ranged,–,8”,–,Thrown Weapon,0,–,3,see p. 264,5
+Bola,Ranged,–,8”,–,Thrown Weapon,-2,0,-,add the throwers STR to POW.,5
+Fire Bomb,Ranged,1,"5""",-,Thrown Weapon,-2,12,3,"1 quick & attack action to use, Crit: fire continuous effect",8
+"Grenade, Explosive",Ranged,–,8”,–,Thrown Weapon,0,12,3,see p. 264,10
+"Grenade, Concussion",Ranged,–,8”,–,Thrown Weapon,0,–,3,see p. 263,20
+"Grenade, Strangle Gas",Ranged,–,8”,–,Thrown Weapon,0,–,3,see p. 264,20
+Sling,Ranged,1,"10""",–,Thrown Weapon,-2,8,-,See p. 270,5
+"Pen, Grenade-Explosive",Ranged,-,"5""",-,Thrown Weapon,-2,10,-,,20
+"Pen, Grenade-Acid",Ranged,-,"5""",-,Thrown Weapon,-2,8,-,Continous,25
+"Pen, Grenade-Knockout",Ranged,-,"5""",-,Thrown Weapon,-2,-,-,"KO, tets 14 vs PHY",35
+Knuckledusters,Melee,,,,Unarmed Combat,0,1,,Special rules with knockout strike.,5
+Garrote,Melee,,,,Unarmed Combat,0,-,,KNG241,2
+"Garrote, Clockwork",Melee,,,,Unarmed Combat,0,-,,KNG242,15

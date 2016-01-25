@@ -405,11 +405,15 @@ class Character(object):
         assets = ''.join(self.assets).lower()
         weaps = [w for w in self.data.weapons.Weapon.tolist()
                  if assets.find(w.lower()) > -1]
-        best_skill = max(self.skills_mil.items(), key=lambda x: x[1])[0]
-        weaps += self.data.weapons.Weapon[(self.data.weapons.Skill == best_skill)
-                                          & (self.data.weapons.Cost != -1)
-                                          & (self.data.weapons.Cost <= self.money)] \
-            .sample().tolist()
+        if not weaps:
+            best_skill = max(self.skills_mil.items(), key=lambda x: x[1])[0]
+            avail = self.data.weapons.Weapon[(self.data.weapons.Skill == best_skill)
+                                             & (self.data.weapons.Cost != 9999)
+                                             & (self.data.weapons.Cost <= self.money)].tolist()
+            avail = list(set(avail).difference(weaps))
+            new_weapon = choice_geom(avail)
+            weaps += [new_weapon]
+            self.money -= self.data.weapons[self.data.weapons.Weapon == new_weapon].Cost.tolist()[0]
         self.weap_table = self.data.weapons[self.data.weapons.Weapon.isin(weaps)]
         self.weap = self.weap_table.Weapon.tolist()
 
@@ -417,6 +421,8 @@ class Character(object):
         string_match = self.data.armor.Armor \
             .apply(lambda x: self.career_table.Assets.sum().lower().find(x.lower()) > -1)
         self.armor_table = self.data.armor[string_match]
+        if len(self.armor_table) == 0:
+            self.armor_table = self.data.armor[self.data.armor.Armor == "Armored Great Coat"]
         self.armor = self.armor_table.Armor.tolist()
 
     def _gen_personal(self):
@@ -580,7 +586,7 @@ class Character(object):
 if __name__ == "__main__":
 
     #c = Character(archetype="Gifted", careers=['Warcaster', 'Cutthroat'], race="Human (Khadoran)", xp=150)
-    c = Character(archetype="Skilled", careers=['Trencher', 'Ranger'], race="Human (Cygnaran)", xp=150)
-    #c = Character(xp=10)
+    #c = Character(archetype="Skilled", careers=['Trencher', 'Ranger'], race="Human (Cygnaran)", xp=150)
+    c = Character(xp=10)
     print c.summary()
     #print c.to_json()
