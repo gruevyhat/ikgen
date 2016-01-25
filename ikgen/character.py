@@ -236,7 +236,7 @@ class Character(object):
             with open(fn, "w") as fo:
                 json.dump(D, fo)
         else:
-            return json.dumps(D)
+            return json.dumps(D, sort_keys=True, indent=4)
 
     def build(self):
         self._gen_race()
@@ -406,12 +406,12 @@ class Character(object):
         weaps = [w for w in self.data.weapons.Weapon.tolist()
                  if assets.find(w.lower()) > -1]
         if not weaps:
-            best_skill = max(self.skills_mil.items(), key=lambda x: x[1])[0]
+            best_skill = choice([k for k, v in self.skills_mil.items()
+                                 if v == max(self.skills_mil.values())])
             avail = self.data.weapons.Weapon[(self.data.weapons.Skill == best_skill)
-                                             & (self.data.weapons.Cost != 9999)
                                              & (self.data.weapons.Cost <= self.money)].tolist()
-            avail = list(set(avail).difference(weaps))
-            new_weapon = choice_geom(avail, 0.5)
+            avail = [a for a in avail if a not in weaps]
+            new_weapon = choice_geom(avail, 0.3)
             weaps += [new_weapon]
             self.money -= self.data.weapons[self.data.weapons.Weapon == new_weapon].Cost.tolist()[0]
         self.weap_table = self.data.weapons[self.data.weapons.Weapon.isin(weaps)]
@@ -421,8 +421,15 @@ class Character(object):
         string_match = self.data.armor.Armor \
             .apply(lambda x: self.career_table.Assets.sum().lower().find(x.lower()) > -1)
         self.armor_table = self.data.armor[string_match]
-        if len(self.armor_table) == 0:
+        if len(self.armor_table) == 0 and self.money >= 25:
             self.armor_table = self.data.armor[self.data.armor.Armor == "Armored Great Coat"]
+            self.money -= 25
+        if 'Shield' in self.skills_mil.keys() \
+                and 'Shield' not in self.armor_table.Armor.tolist() \
+                and self.money >= 20:
+            self.armor_table = pd.concat([self.armor_table,
+                                          self.data.armor[self.data.armor.Armor == "Shield"]])
+            self.money -= 20
         self.armor = self.armor_table.Armor.tolist()
 
     def _gen_personal(self):
