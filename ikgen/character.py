@@ -70,6 +70,10 @@ def parse(skills):
     return D
 
 
+def uniq(L):
+    return [l for i, l in enumerate(L) if l not in L[:i]]
+
+
 def choice_geom(S, p=0.3):
     n = len(S)
     while n >= len(S):
@@ -138,21 +142,21 @@ class LC(object):
 
 class Character(object):
 
-    def __init__(self, race=None, stats={},
-                 archetype=None, benefits=[],
-                 careers=[], spells=[], abilities=[],
-                 connections=None, money=0,
-                 assets=[], xp=0, chardata=None):
-        self.race = race
-        self.archetype = archetype
-        self.benefits = benefits
-        self.fixed_stats = stats
-        self.careers = careers
-        self.spells = spells
-        self.money = money
-        self.assets = assets
+    def __init__(self, race=None, stats=None,
+                 archetype=None, benefits=None,
+                 careers=None, spells=None, abilities=None,
+                 connections=None, money=None,
+                 assets=None, xp=0, chardata=None):
+        self.race = race or None
+        self.archetype = archetype or None
+        self.benefits = benefits or []
+        self.fixed_stats = stats or {}
+        self.careers = careers or []
+        self.spells = spells or []
+        self.money = money or 0
+        self.assets = assets or []
         self.connections = connections or []
-        self.abilities = abilities
+        self.abilities = abilities or []
         self.level = 'Hero'
         self.data = chardata or CharData()
         self.build()
@@ -329,13 +333,14 @@ class Character(object):
                 self.career_table = pd.concat([self.career_table, new_career])
             except:
                 self.career_table = new_career
-            self.careers = list(set(self.careers + [new_career.Career.any()]))
+            self.careers = uniq(self.careers + [new_career.Career.any()])
 
     def _gen_abilities(self):
         if not self.abilities:
             self.abilities = self.career_table['Starting Abilities'] \
                 .apply(lambda x: x.split(', ')) \
                 .sum()
+            print self.abilities
             self.ability_table = self.data \
                 .abilities[self.data.abilities.Ability.isin(self.abilities)]
 
@@ -499,13 +504,13 @@ class Character(object):
                 self._add_occ()
         if sacm > 0:
             for _ in range(sacm):
-                sacm_fncs = {0: self._add_abil,
-                             1: self._add_conn,
-                             2: self._add_mil}
+                sacm_fncs = [self._add_abil, self._add_conn]
+                if any(v < LEVELS[self.level] for v in self.skills_mil.values()):
+                    sacm_fncs += [self._add_mil]
                 if self.spells \
                         and len(self.spell_table) < 2 * self.stats['INT']:
-                    sacm_fncs.update({3: self._add_spell})
-                sacm_fncs[choice(range(len(sacm_fncs)))]()
+                    sacm_fncs += [self._add_spell]
+                choice(sacm_fncs)()
         if stat > 0:
             for _ in range(stat):
                 self._add_stat()
@@ -593,7 +598,7 @@ class Character(object):
 if __name__ == "__main__":
 
     #c = Character(archetype="Gifted", careers=['Warcaster', 'Cutthroat'], race="Human (Khadoran)", xp=150)
-    #c = Character(archetype="Skilled", careers=['Trencher', 'Ranger'], race="Human (Cygnaran)", xp=150)
-    c = Character(xp=10)
+    c = Character(archetype="Skilled", careers=['Trencher', 'Ranger'], race="Human (Cygnaran)")
+    #c = Character(xp=10)
     print c.summary()
     #print c.to_json()
