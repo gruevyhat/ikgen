@@ -66,7 +66,7 @@ if __name__ == "__main__":
                     for k, v in args.items() if v}
             args['xp'] = int(args['xp'])
             c = Character(**args)
-            sys.stdout.write(c.summary()+"\n")
+            sys.stdout.write(c.summary().encode('utf8')+"\n")
 
     except KeyboardInterrupt:
         pass

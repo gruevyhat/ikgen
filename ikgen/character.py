@@ -340,7 +340,6 @@ class Character(object):
             self.abilities = self.career_table['Starting Abilities'] \
                 .apply(lambda x: x.split(', ')) \
                 .sum()
-            print self.abilities
             self.ability_table = self.data \
                 .abilities[self.data.abilities.Ability.isin(self.abilities)]
 
