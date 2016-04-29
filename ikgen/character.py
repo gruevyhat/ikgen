@@ -484,7 +484,7 @@ class Character(object):
             .benefits[self.data.benefits.Benefit.isin(self.benefits)]
 
     def _adjust_careers(self):
-        if self.career_table.Career.apply(lambda x: ! x.startswith("Warcaster")).any():
+        if self.career_table.Career.apply(lambda x: not x.startswith("Warcaster")).any():
             limit = self.stat_table[self.stat_table.Set == self.level]['ARC'] \
                 .iloc[0]
             if self.stats['ARC'] < limit:
@@ -497,19 +497,19 @@ class Character(object):
             self.level = "Veteran"
         if xp >= 100:
             self.level = "Epic"
-        self.xp, occ, sacm, stat, ben, ben_or_car = self.data.xp.loc[xp].tolist()
+        self.xp, occ, scam, stat, ben, ben_or_car = self.data.xp.loc[xp].tolist()
         if occ > 0:
             for _ in range(occ):
                 self._add_occ()
-        if sacm > 0:
-            for _ in range(sacm):
-                sacm_fncs = [self._add_abil, self._add_conn]
+        if scam > 0:
+            for _ in range(scam):
+                scam_fncs = [self._add_abil, self._add_conn]
                 if any(v < LEVELS[self.level] for v in self.skills_mil.values()):
-                    sacm_fncs += [self._add_mil]
+                    scam_fncs += [self._add_mil]
                 if self.spells \
                         and len(self.spell_table) < 2 * self.stats['INT']:
-                    sacm_fncs += [self._add_spell]
-                choice(sacm_fncs)()
+                    scam_fncs += [self._add_spell]
+                _ = choice(scam_fncs)()
         if stat > 0:
             for _ in range(stat):
                 self._add_stat()
