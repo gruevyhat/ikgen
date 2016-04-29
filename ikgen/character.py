@@ -484,7 +484,7 @@ class Character(object):
             .benefits[self.data.benefits.Benefit.isin(self.benefits)]
 
     def _adjust_careers(self):
-        if self.career_table.Career.apply(lambda x: x.startswith("Warcaster")).any():
+        if self.career_table.Career.apply(lambda x: ! x.startswith("Warcaster")).any():
             limit = self.stat_table[self.stat_table.Set == self.level]['ARC'] \
                 .iloc[0]
             if self.stats['ARC'] < limit:
