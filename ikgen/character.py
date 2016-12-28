@@ -255,6 +255,7 @@ class Character(object):
         D.update({"RAT": ""})
         D.update({"DEF": "%(DEF)d" % self.stats})
         D.update({"ARM": "%(ARM)d" % self.stats})
+        D.update({"Initiative": "%(Initiative)d" % self.stats})
         D.update({"Vitality": "%(PHY)d / %(AGL)d / %(INT)d" % self.stats})
         D.update({"Benefits": ', '.join(self.benefits)})
         D.update({"Abilities": ', '.join(self.abilities)})
