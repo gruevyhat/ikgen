@@ -355,6 +355,8 @@ class Character(object):
             .iloc[0].to_dict()
         if self.archetype == "Gifted":
             self.stats['ARC'] = 2
+        else:
+            self.stats['ARC'] = 0
         stat_sum = sum(self.stats.values())
         while sum(self.stats.values()) < stat_sum + 3:
             self._add_stat()
@@ -479,12 +481,15 @@ class Character(object):
                            if c != '-']
         self.ability_table = self.data \
             .abilities[self.data.abilities.Ability.isin(self.abilities)]
-        self.benefits += [c for c in self.race_table['Benefits'].tolist() if c != '-']
+        self.benefits += [c for c in
+                          self.race_table['Benefits'].any().split(", ")
+                          if c != '-']
         self.benefit_table = self.data \
             .benefits[self.data.benefits.Benefit.isin(self.benefits)]
 
     def _adjust_careers(self):
-        if self.career_table.Career.apply(lambda x: not x.startswith("Warcaster")).any():
+        if self.archetype == "Gifted" \
+                and self.career_table.Career.apply(lambda x: not x.startswith("Warcaster")).any():
             limit = self.stat_table[self.stat_table.Set == self.level]['ARC'] \
                 .iloc[0]
             if self.stats['ARC'] < limit:
