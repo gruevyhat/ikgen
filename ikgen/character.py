@@ -17,7 +17,7 @@ import json
 import pandas as pd
 import numpy as np
 from random import choice
-from collections import defaultdict, Counter
+from collections import defaultdict, Counter, OrderedDict
 from fdfgen import forge_fdf
 
 
@@ -242,6 +242,35 @@ class Character(object):
         else:
             return json.dumps(D, sort_keys=True, indent=4)
 
+    def to_tsv(self, fn=None):
+        D = OrderedDict()
+        D.update({"Name": self.name})
+        D.update({"Race": "%s %s" % (self.race, self.gender)})
+        D.update({"Careers": ", ".join(self.careers)})
+        D.update({"PHY/SPD/STR": "%(PHY)d / %(SPD)d / %(STR)d" % self.stats})
+        D.update({"AGL/PRW/POI": "%(AGL)d / %(PRW)d / %(POI)d" % self.stats})
+        D.update({"INT/ARC/PER": "%(INT)d / %(ARC)d / %(PER)d" % self.stats})
+        D.update({"CMD/Will/San": "%(Command)d / %(Willpower)d / %(Sanity)d" % self.stats})
+        D.update({"MAT": ""})
+        D.update({"RAT": ""})
+        D.update({"DEF": "%(DEF)d" % self.stats})
+        D.update({"ARM": "%(ARM)d" % self.stats})
+        D.update({"Vitality": "%(PHY)d / %(AGL)d / %(INT)d" % self.stats})
+        D.update({"Benefits": ', '.join(self.benefits)})
+        D.update({"Abilities": ', '.join(self.abilities)})
+        D.update({"Military Skills": self.skills_mil})
+        D.update({"Occupational Skills": self.skills_occ})
+        D.update({"Military Skills": ', '.join("%s %d" % i
+                                               for i in self.skills_mil.items())})
+        D.update({"Occupational Skills": ', '.join("%s %d" % i
+                                                   for i in self.skills_occ.items())})
+        D.update({"Spells": ', '.join(self.spells)})
+        D.update({"Languages": self.languages})
+        D.update({"Connections": ', '.join(self.connections)})
+        D.update({"Level": "%s (%d XP)" % (self.level, self.xp)})
+        for k, v in D.items():
+            print "%s\t%s" % (k, v)
+
     def build(self):
         self._gen_race()
         self._gen_archetype()
@@ -379,6 +408,7 @@ class Character(object):
         self.stats[u'Initiative'] = sum(self.stats[s] for s in ['PRW', 'SPD', 'PER'])
         self.stats[u'Command'] = self.stats['INT']
         self.stats[u'Willpower'] = self.stats['INT'] + self.stats['PHY']
+        self.stats[u'Sanity'] = self.stats['INT'] + self.stats['PHY'] + self.stats['PER'] - self.stats['ARC']
         if 'Command' in self.skills_occ.keys():
             self.stats[u'Command'] += int(self.skills_occ['Command'])
 

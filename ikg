@@ -13,6 +13,7 @@ Character Generation Options:
     -s, --stats STR      A JSON-formatted dict of attributes, e.g., '{"PER":8}'.
     -x, --xp INT         Starting experience. [default: 0]
     -l, --list           List possible races, classes, and archetypes.
+    -C, --compact        Write compact character format to STDOUT.
     -h --help
     --version
 
@@ -61,12 +62,15 @@ if __name__ == "__main__":
             start_service(host=args['hostname'],
                           port=int(args['port']))
         else:
-            args = {k: v for k, v in args.items() if k in ARGS}
-            args = {k: json.loads(v) if k in ('careers', 'stats') else v
-                    for k, v in args.items() if v}
-            args['xp'] = int(args['xp'])
-            c = Character(**args)
-            sys.stdout.write(c.summary().encode('utf8')+"\n")
+            params = {k: v for k, v in args.items() if k in ARGS}
+            params = {k: json.loads(v) if k in ('careers', 'stats') else v
+                      for k, v in params.items() if v}
+            params['xp'] = int(params['xp'])
+            c = Character(**params)
+            if args['compact']:
+                c.to_tsv()
+            else:
+                sys.stdout.write(c.summary().encode('utf8')+"\n")
 
     except KeyboardInterrupt:
         pass
