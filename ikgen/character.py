@@ -545,7 +545,7 @@ class Character(object):
                 if any(v < LEVELS[self.level] for v in self.skills_mil.values()):
                     scam_fncs += [self._add_mil]
                 if self.spells \
-                        and len(self.spell_table) < 2 * self.stats['INT']:
+                        and len(self.spell_table) < (2 * self.stats['INT']):
                     scam_fncs += [self._add_spell]
                 _ = choice(scam_fncs)()
         if stat > 0:
@@ -579,9 +579,10 @@ class Character(object):
                        for s in spell_lists]
                       for x in y]
         new_spell = choice([s for s in all_spells if s not in
-                          self.spell_table.Spell.tolist()])
+                            self.spell_table.Spell.tolist()])
         self.spell_table = pd.concat([self.spell_table,
                                       self.data.spells[self.data.spells.Spell == new_spell]])
+        self.spells = self.spell_table.Spell.tolist()
 
     def _add_abil(self):
         all_abils = self.career_table['All Abilities'] \
@@ -590,6 +591,7 @@ class Character(object):
                            self.ability_table.Ability.tolist()])
         self.ability_table = pd.concat([self.ability_table,
                                         self.data.abilities[self.data.abilities.Ability == new_abil]])
+        self.abilities = self.ability_table.Ability.tolist()
 
     def _add_conn(self):
         self.conns = self.career_table['All Conns'].apply(lambda x: x.split(', ')).sum()
