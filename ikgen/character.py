@@ -246,6 +246,8 @@ class Character(object):
         D = OrderedDict()
         D.update({"Name": self.name})
         D.update({"Race": "%s %s" % (self.race, self.gender)})
+        if self.subrace != '-':
+            D.update({"Race": "%s %s" % (self.subrace, self.gender)})
         D.update({"Careers": ", ".join(self.careers)})
         D.update({"PHY/SPD/STR": "%(PHY)d / %(SPD)d / %(STR)d" % self.stats})
         D.update({"AGL/PRW/POI": "%(AGL)d / %(PRW)d / %(POI)d" % self.stats})
