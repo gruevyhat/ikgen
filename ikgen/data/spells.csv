@@ -70,7 +70,7 @@ Cross-Country,2,6,-,-,YES,NO,"Target friendly char gains Pathfinder and Hunter. 
 Crusader's Call,3,SELF,CTRL,-,NO,NO,Friendly characters beginging a charge in the spellcaster's control area gaon a +2 movement.  Crusader's Call lasts for one round.
 Curse of Shadows,3,8,-,-,YES,YES,Target enemy suffers -2 ARM and cannot make free strikes. A char can advance through the affected char if he has enough movement to move completely past the affected char's base.
 Dark Fire,2,10,-,12,NO,YES,"If Caster can gain soul tokens, gain soul tokens from characters destroyed by spell."
-Dark Guidance,4,SELF,CTRL,-,NO,NO,"While in the spellcaster’s control range, friendly characters gain an additional die on their melee attack rolls this turn."
+Dark Guidance,4,SELF,CTRL,-,NO,NO,"While in the spellcaster's control range, friendly characters gain an additional die on their melee attack rolls this turn."
 Dark Water,3,CTRL,4,-,NO,NO,"Place a 4"" AOE anywhere completely within caster's control area that does not touch another char's base. AOE is shallow water and remains in play for one round. While completely within the AOE, an Amphibious char canoot be targetd by ranged attacks."
 Daylight,3,SELF,CTRL,-,NO,NO,"While in the spellcaster's control area, Infernal and Undead characters suffer -2 DEF and ARM.  Additionally, the area around the caster glows with enough light so see in darkness (p.225).  Daylight lasts for one round."
 Deadweight,2,8,-,12,NO,YES,"When Deadweight destroys an enemt model living or undead char, choose a char within 2"" of destroyed char. The chosen char must forfeit either movement or action on his next turn."
@@ -136,23 +136,23 @@ Grave Whispers,1,SELF,-,-,YES,NO,Can Speak to the dead. Full Rules p. 69 Urban A
 Grind,3,10,-,14,NO,YES,"When a steamjack is hit by Grind, it suffers 1 damage to it's first available movement system box."
 Ground Zero,3,SELF,5,13,NO,NO,"Center a 5"" AOE on caster. All other chars in AOE are hit and suffer POW 13 damage roll. Chars Damaged are pushed d6"" Directly away  from caster in order of casters choosing"
 Guided Blade,1,6,-,-,NO,NO,Target friendly character gains +1 on this melee attack rolls and his melee weapon gains Magical Weapon.  Guided Blade lasts for one round.
-Guided Fire,3,SELF,CTRL,-,NO,NO,"While in the spellcaster’s control area, characters in his battlegroup gain boosted ranged attack rolls. Guided Fire lasts for one round."
+Guided Fire,3,SELF,CTRL,-,NO,NO,"While in the spellcaster's control area, characters in his battlegroup gain boosted ranged attack rolls. Guided Fire lasts for one round."
 Hallowed Avenger,2,6,-,-,YES,NO,"When an enemy attack incapacitates/destroys 1 or more friendly char in 5"" of target jack in castor's battlegroup, after attack is resolved the affected jack can charge and enemy char. Then it expires."
-Hallowed Guardian,2,6,-,-,YES,NO,"When an enemy attack incapacitates or destroys one or more friendly characters within 5˝ of target warbeast in the spellcaster’s battlegroup, after the attack is resolved the affected warbeast can charge an enemy. Hallowed Guardian then expires."
+Hallowed Guardian,2,6,-,-,YES,NO,"When an enemy attack incapacitates or destroys one or more friendly characters within 5˝ of target warbeast in the spellcaster's battlegroup, after the attack is resolved the affected warbeast can charge an enemy. Hallowed Guardian then expires."
 Hand of Fate,2,6,-,-,YES,NO,Target character gains an additional die on attack and damage rolls.  Discard the lowest die of each roll.
-Harvest,4,SELF,CTRL,-,YES,NO,"When a living or undead enemy character is destroyed in the spellcaster’s control area, the spellcaster can gain 1 fury point. The spellcaster’s fury point total cannot exceed his FURY as a result of Harvest."
+Harvest,4,SELF,CTRL,-,YES,NO,"When a living or undead enemy character is destroyed in the spellcaster's control area, the spellcaster can gain 1 fury point. The spellcaster's fury point total cannot exceed his FURY as a result of Harvest."
 Heal,4,*,-,-,NO,NO,"Friendly incapacitated character in B2B with the spellcaster is no longer incapacitated and regains 1 vitality in each aspect. The character no longer suffers from his most recent roll on the Injury table (p.217).  The target character becomes knocked down.  Each time a character is targeted by this spell make d6 roll on the Price of Healing table (p.240), adding +1 to the roll each time the character has been targeted by this spell after the first time."
 Heightened Reflexes,2,6,-,-,YES,NO,Target character cannot be knocked down or made stationary
 Hellmouth,4,8,*,-,NO,YES,"If this attack misses, nothing happens. If it hits, before making the damage roll, push characters within 3˝ of the character hit 3˝ directly toward the character hit in the order you choose, then center a 3˝ AOE on the character hit. Characters in the AOE suffer a POW 12 damage roll."
 Hellfire,3,10,-,14,NO,YES,Character hit must make willpower roll against Terror [Caster Willpower +2]
 Hex Blast,3,10,3,13,NO,YES,Upkeep spells and Animi on the character directly hit by Hex Blast immediately expire.
 Hex Hammer,3,SELF,CTRL,-,YES,NO,"When an enemy char casts a spell or uses an animus while in the castors control area, after the spell or animus has been cast or used the enemy suffers d3 damage."
-Hidden Path,1,SELF,-,-,YES,NO,The target character’s path is magically obscured whether he is mounted or on foot. The target number for Tracking rolls to follow the target character’s trail is increased by 3.
+Hidden Path,1,SELF,-,-,YES,NO,The target character's path is magically obscured whether he is mounted or on foot. The target number for Tracking rolls to follow the target character's trail is increased by 3.
 Hoarfrost,3,8,3,14,NO,YES,"Hoarfrost causes Cold damage.  On a critical hit, characters hit becomes stationary for one round unless they have Immunity: Cold."
 Holy Ward,2,6,-,-,YES,NO,Target friendly character gains +2 DEF and cannot be targeted by enemy spells or animi.
 Hot Shot,2,6,-,-,YES,NO,Tar Friendly Char in caster's battle group gains boosted ranged atk dmg rolls
 Howling Flames,2,SP 8,-,10,NO,YES,"Howling Fames causes fire damage.  On a critical hit, the character hit suffers Fire continuous effect."
-Hunter's Mark,4,10,-,-,NO,NO,Friendly characters can charge or make a slam power attack against an enemy hit by Hunter’s Mark without being forced or spending focus. A character charging an enemy hit by Hunter’s Mark gains +2˝ movement. Hunter’s Mark lasts for one round.
+Hunter's Mark,4,10,-,-,NO,NO,Friendly characters can charge or make a slam power attack against an enemy hit by Hunter's Mark without being forced or spending focus. A character charging an enemy hit by Hunter's Mark gains +2˝ movement. Hunter's Mark lasts for one round.
 Hymm of Battle,2,6,-,-,NO,NO,Target steamjack gains +2 on attack and damage rolls.  Hymn of Battle lasts for one round.
 Hymm of Passage,2,6,-,-,NO,NO,Target steamjack cannot be targeted by non-magial ranged attacks.  Hymn of Passage lasts for one round.
 Hymm of Shielding,4,SELF,CTRL,-,NO,NO,"While in this character's control area, Friendly characters cannot be targeted by enemy spells.  Hymn of Shielding lasts for one round."
@@ -161,7 +161,7 @@ Ice Shield,1,6,-,-,YES,NO,Target gains +2 ARM.  Ice Shield immediately expires i
 Icy Grip,2,8,-,-,YES,YES,Target character without Immunity: Cold suffer -2DEF and cannot run or make power attacks.
 Ignite,2,6,-,-,YES,NO,Target character gains +2 on melee attack damage rolls.  The effected character gains Critical Fire on his normal melee attacks.
 Immolation,2,8,-,12,NO,YES,"Immolation causes fire damage.  On a critical hit, the character hit suffers the Fire continuous effect."
-Incite,4,SELF,-,-,NO,NO,Characters in the spellcaster’s battlegroup gain +2 to attack and damage rolls against enemies in the spellcaster’s command range. Incite lasts for one turn.
+Incite,4,SELF,-,-,NO,NO,Characters in the spellcaster's battlegroup gain +2 to attack and damage rolls against enemies in the spellcaster's command range. Incite lasts for one turn.
 Infernal Machine,2,6,-,-,YES,NO,Target steamjack in the spellcaster's battlegroup gains Terror [14] against enemy characters and +2 MAT and SPD.
 Inferno,3,10,3,12,NO,YES,all characters hit suffer a POW 12 fire damage roll.  The AOE remains in play for one round.  Characters entering or ending their turns in the AOE suffer an unstoppable POW 12 fire damage roll.
 Influence,1,10,-,-,NO,YES,The spellcaster make a contested Willpower roll against a living character hit by this sell.  If the caster wins the player takes control of the character hit.  The character immediately makes one normal melee attack then Influence expires.
@@ -172,7 +172,7 @@ Iron Flesh,2,6,-,-,YES,NO,Target friendly living character gains +3 DEF but suff
 Jackhammer,1,6,-,-,NO,NO,The target friendly steamjack can immediately make one melee attack.
 Jaws of Death,2,SELF,-,-,YES,NO,"In addition to his normal attacks, the spellcaster can make one unarmed melee attack with his fanged maw during each of his turns. This POW 3 attack uses the Unarmed Combat skill. If the spellcaster destroys a living character with this attack, he can consume it to regain d3 vitality points."
 Jump Start,1,SELF,CTRL,-,NO,NO,The spellcaster and characters in his battlegroup area can immediately turn to face any direction. Affected characters in battlegroup that are stationary or knocked down are no longer stationary and stand up.
-Killing Ground,3,SELF,CTRL,-,NO,NO,Friendly characters beginning a charge in the spellcaster’s control area gain Pathfinder (p. 164). Warbeasts in the spellcaster’s battlegroup beginning their turns in his control area can charge or make slam power attacks against enemies without being forced. Killing Ground lasts for one round.
+Killing Ground,3,SELF,CTRL,-,NO,NO,Friendly characters beginning a charge in the spellcaster's control area gain Pathfinder (p. 164). Warbeasts in the spellcaster's battlegroup beginning their turns in his control area can charge or make slam power attacks against enemies without being forced. Killing Ground lasts for one round.
 Killing Tide,3,SELF,-,-,YES,NO,"The spellcaster gains Berserk. (When a character with Berserk incapacitates or destroys one or more characters with a melee attack during his turn, immediately after the attack is resolved he must make one additional melee attack against another character in his melee range.)"
 Lamentation,3,SELF,CTRL,-,YES,NO,"While in the spellcaster's control area. Enemies pay double the fatigue, focus or fury point cost to cast or upkeep spells."
 Leash,2,6,-,-,YES,NO,"Immediately after the spellcaster ends his normal movement, target warbeast in his battlegroup can advance up to 3˝ toward him."
@@ -195,9 +195,9 @@ Mist Sight,2,6,-,-,YES,NO,Target character ignores cloud effects when determinin
 Mobility,2,SELF,CTRL,-,NO,NO,Characters in the spellcaster's battlegroup currently in his control area gain +2 SPD and Pathfinder.
 Mortality,3,10,-,-,NO,YES,Target enemy suffers -2 DEF and ARM and cannot regain vitality. Mortality lasts for one round.
 Mudfoot,2,10,-,-,NO,YES,Target character cannot run or charge and treats open terrain as rough terrain for one round.
-Murder of Crows,3,CTRL,5,-,YES,NO,"Place a 5˝ AOE cloud effect anywhere completely within the spellcaster’s control area. Characters that enter or end their activations in the AOE suffer an unboostable POW 8 damage roll unless they are part of the spellcaster’s battlegroup. This is not an offensive spell, and no damage is dealt when the AOE is placed."
+Murder of Crows,3,CTRL,5,-,YES,NO,"Place a 5˝ AOE cloud effect anywhere completely within the spellcaster's control area. Characters that enter or end their activations in the AOE suffer an unboostable POW 8 damage roll unless they are part of the spellcaster's battlegroup. This is not an offensive spell, and no damage is dealt when the AOE is placed."
 Muzzle,2,10,-,12,NO,YES,A warbeast damaged by Muzzle cannot advance toward the spellcaster for one round.
-Mystic Wards,3,SELF,CTRL,-,NO,NO,"Enemy animi and enemy upkeep spells on characters in the spellcaster’s battlegroup that are in his control area immediately expire. While within 5˝ of a character in the spellcaster’s battlegroup that is in his control area, enemies cannot cast, channel, or upkeep spells. Mystic Ward lasts for one round."
+Mystic Wards,3,SELF,CTRL,-,NO,NO,"Enemy animi and enemy upkeep spells on characters in the spellcaster's battlegroup that are in his control area immediately expire. While within 5˝ of a character in the spellcaster's battlegroup that is in his control area, enemies cannot cast, channel, or upkeep spells. Mystic Ward lasts for one round."
 Obliteration,4,10,4,15,NO,YES,The force of the attack blasts apart the earth itself.
 Occultation,2,6,-,-,YES,NO,Target character gains stealth and +3 on his Sneak rolls.
 Overmind,4,SELF,CTRL,-,NO,NO,"The spellcaster immediately makes a contested Willpower roll against all living enemies in his control area.  Roll once for the spellcaster.  If the spellcaster beats the enemy's Willpower roll, he can cause that character to advance up to 3” and perform one non-spell, non-feat quick action.  If the enemy beats or ties the spellcaster's roll, he is not affected. This spell can be cast only once per round."
@@ -219,7 +219,7 @@ Purification,3,SELF,CTRL,-,NO,NO,"Continuous effects, Animus, and upkeep spells 
 Quagmire,2,6,-,-,YES,NO,"While in B2B with target friendly character, enemies suffer -2 DEF and cannot advance except to change facing."
 Quickened,4,SELF,-,-,YES,NO,"The spellcaster can make one attack or quick action at the start of any other character's turn, then Quickened expires."
 Raging Winds,4,SELF,CTRL,-,NO,NO,"While in the spellcaster's control area, enemies suffer -2 DEF.  Enemies beginning their turn in the spellcaster's control area cannot run or charge. Raging wind lasts for one round."
-Raise Dead,4,SELF,CTRL,-,YES,NO,"When a living character is destroyed in the spellcaster’s control area, the spellcaster can immediately make a full advance with the destroyed character followed by a normal melee attack, then remove the destroyed character from the table. During these attacks, the destroyed character is considered to be undead."
+Raise Dead,4,SELF,CTRL,-,YES,NO,"When a living character is destroyed in the spellcaster's control area, the spellcaster can immediately make a full advance with the destroyed character followed by a normal melee attack, then remove the destroyed character from the table. During these attacks, the destroyed character is considered to be undead."
 Rampager,3,10,-,-,NO,YES,"The spellcaster takes control of target enemy warbeast. He can make one full advance with the warbeast and then make one normal attack with it, then Rampager expires. While the warbeast is affected by Rampager, it cannot be forced and cannot use its animus. Rampager can be cast only once per turn."
 Rapid Growth,2,CTRL,4,-,YES,NO,Place the AOE completely in this character's control area. The AOE is a forest that remains in play as long as the upkeep is paid.
 Ravager,2,6,-,-,NO,NO,"Target character in the spellcaster's battlegroup gains Beserk for one turn. While affected by Ravager, a character cannon make chain attacks. (When a char with Beserk incapacitates a target with a melee attack, immediately after the attack is resolved, the char must make an additional attack against another target in melee range.)"
@@ -230,7 +230,7 @@ Realignment,4,SELF,CTRL,-,NO,NO,"While in caster's CTRL, whorshipers of Cyriss c
 Reconstruction,4,SELF,CTRL,-,NO,NO,Remove d6 dmg from each construct char in caster's CTRL.
 Redline,2,6,-,-,YES,NO,"Target friendly steamjack gains +2 STR and SPD, and can run, charge, power attack slams or tramples without spending focus or being driven. When the steamjack ends its turn it suffers d3 damage points."
 Refuge,2,6,-,-,YES,NO,"When the target character hits another character with an attack during his turn, immediately after his turn ends the character effected by this spell can make a full advance.  The character cannot be targeted by free strikes during this movement."
-Restoration,2,6,-,-,YES,NO,"Target friendly living character gains +2 ARM. When this spell’s upkeep is paid, the spellcaster regains d3 vitality if he is within 3˝ of another character affected by this spell."
+Restoration,2,6,-,-,YES,NO,"Target friendly living character gains +2 ARM. When this spell's upkeep is paid, the spellcaster regains d3 vitality if he is within 3˝ of another character affected by this spell."
 Return Fire,1,6,-,-,NO,NO,"When target character is targeted by an enemy ranged attack, after the attack is resolved the affected character can make one normal ranged or melee attack, then Return Fire expires.  Return Fire lasts for one round."
 Rift,3,8,4,13,NO,YES,The AOE is rough terrain and remains in play for one round.
 Righteous Flames,2,6,-,-,NO,NO,"The character gains Immunity: Fire.  When a character without Immunity : Fire ends its movement within 2” of the affected character, the character without Immunity: Fire  suffers the Fire continuous effect. Righteous Flamed lasts for one round."
@@ -271,9 +271,9 @@ Shrapnel Swarm,3,8,*,13,NO,YES,"On a direct hit against an enemy center a 4"" AO
 Snipe,2,6,-,-,YES,NO,Target character's ranged weapons gain +4 RNG.
 Solid Ground,2,SELF,CTRL,-,YES,NO,"While in the spellcaster's control area, friendly characters cannot be knocked down and do not suffer blast damage."
 Solovin's Boon,1,SELF,-,-,YES,NO,The spellcaster can reroll failed Medicine skill rolls.  Each failed roll can be rerolled only once due to Solovin's Boon.
-Soothing Song,1,SELF,CTRL,-,NO,NO,Remove up to 1 fury point from each friendly living warbeast in the spellcaster’s battlegroup that is in his control area. Soothing Song can be cast only once per turn.
+Soothing Song,1,SELF,CTRL,-,NO,NO,Remove up to 1 fury point from each friendly living warbeast in the spellcaster's battlegroup that is in his control area. Soothing Song can be cast only once per turn.
 Soul Mark,1,8,-,-,YES,YES,"Caster can automatically sense target while within ARC X 50 Feet. If Caster can gain Soul Tokens, can claim Soul Tokens regardless of proximity."
-Soul Slave,2,6,-,-,YES,NO,Target warbeast in the spellcaster’s battlegroup automatically passes threshold checks. The spellcaster can channel spells through the affected warbeast.
+Soul Slave,2,6,-,-,YES,NO,Target warbeast in the spellcaster's battlegroup automatically passes threshold checks. The spellcaster can channel spells through the affected warbeast.
 Spirit Fang,2,10,-,12,NO,YES,A character damaged by Spirit Fang suffers –2 SPD and DEF for one round.
 Spirit Lash,2,10,-,10,NO,YES,"A character damaged by Spirit Lash cannot ru, charge, or be placed for one round."
 Star-Crossed,3,SELF,CTRL,-,NO,NO,"While in CTRL area, enemies gain additional die on attack rolls. Discard highest die of each roll. Star-Crossed lasts for one round."
@@ -283,13 +283,13 @@ Stone Spray,3,SP8,-,12,NO,YES,"On a critical hit, the character hit is knocked d
 Stone Stance,1,6,-,-,NO,NO,"Target character cannot be knocked down, pushed, or slammed for one round."
 Stone Strength,2,6,-,-,YES,NO,Target character gains +1 STR and ARM.
 Storm Tossed,1,8,-,-,NO,YES,"When a enemy character is hit by Storm Tossed, he can be pushed 3” directly away from the spells point of origin."
-Storm Wall,3,SELF,CTRL,-,NO,NO,"While in the spellcaster’s control area, enemies suffer –5 RNG on their ranged attacks. When an enemy AOE ranged attack deviates from a point in the spellcaster’s control area, the spellcaster’s player chooses the deviation direction after the deviation distance is rolled. Storm Wall lasts for one round."
+Storm Wall,3,SELF,CTRL,-,NO,NO,"While in the spellcaster's control area, enemies suffer –5 RNG on their ranged attacks. When an enemy AOE ranged attack deviates from a point in the spellcaster's control area, the spellcaster's player chooses the deviation direction after the deviation distance is rolled. Storm Wall lasts for one round."
 Stranglehold,2,10,-,11,NO,YES,A character damaged by Stranglehold forfeits either its movment or action next turn.
 Stygian Abyss,3,10,-,12,NO,YES,"On Critical causes  Shadow Bind ( -3 DEF, and for 1 round can't advance except to change facing)."
 Summong Vortex,2,SELF,-,-,NO,NO,Center a 3˝ AOE cloud effect on the spellcaster. Enemies suffer –2 to attack rolls while in the AOE. Summon Vortex lasts for one round.
 Sunburst,3,10,3,13,NO,YES,Blast damage from this spell only affects enemies.
 Sunder Spirit,2,10,-,12,NO,YES,A warbeast damaged by Sunder Spirit loses its animus for one round.
-Sunhammer,3,SELF,CTRL,-,YES,NO,Enemy warbeasts and warjacks that advance more than 1˝ and end their normal movement in the spellcaster’s control area suffer d3 damage points.
+Sunhammer,3,SELF,CTRL,-,YES,NO,Enemy warbeasts and warjacks that advance more than 1˝ and end their normal movement in the spellcaster's control area suffer d3 damage points.
 Sure Foot,3,6,-,-,YES,NO,"Target character gains +2 DEF and cannot be knocked down. While within 3˝ of the affected character, friendly characters also gain +2 DEF and cannot be knocked down."
 Superiority,3,6,-,-,YES,NO,"Target friendly steamjack gains +2 SPD, MAT, and DEF and cannot be knocked down."
 Swarm,2,SELF,-,-,NO,NO,Gain concealment. Living enemies suffer –2 to attack rolls while within 2˝  of this character. Swarm lasts for one round.
@@ -306,21 +306,21 @@ Triage,2,B2B,-,-,NO,NO,The spellcaster must be in B2B with an incapacitated char
 True Path,3,SELF,CTRL,-,NO,NO,Friendly characters beginning their turns in the spellcaster's control area gain +2 movement and Pathfinder during their turns.  True Path lasts for one round.
 True Sight,2,SELF,-,-,YES,NO,"The character ignores concealment, Camouflage, and stealth.  The character can also see in complete darkness."
 Twister,2,10,3,10,NO,YES,The AOE is a cloud effect that remians in play for one round.
-Unminding,3,10,-,-,YES,YES,Target enemy warbeast suffers –2 FURY and THR and loses its animus. The spellcaster can cast an affected warbeast’s animus as a spell as if the animus belonged to a warbeast he controls.
-Unnatural Aggression,2,6,-,-,YES,NO,"If target warbeast in the spellcaster’s battlegroup suffered damage during an enemy’s turn during the last round, the warbeast can make a full advance during the spellcaster’s next Maintenance Phase. During this movement, it must move toward the nearest enemy."
+Unminding,3,10,-,-,YES,YES,Target enemy warbeast suffers –2 FURY and THR and loses its animus. The spellcaster can cast an affected warbeast's animus as a spell as if the animus belonged to a warbeast he controls.
+Unnatural Aggression,2,6,-,-,YES,NO,"If target warbeast in the spellcaster's battlegroup suffered damage during an enemy's turn during the last round, the warbeast can make a full advance during the spellcaster's next Maintenance Phase. During this movement, it must move toward the nearest enemy."
 Unstoppable Force,2,SELF,CTRL,-,NO,NO,"While in caster's CTRL characters in her battlegroup gain Bulldoze. Lasts one turn. (When a character with Bulldoze advances into B2B with an enemy, it can push that enemy 2"" directly away. Can only be pushed by Buldoze once per turn. No effect if making a Trample power attack.)"
-Veil of Mists,3,CTRL,4,-,YES,NO,"Place a 4˝ AOE cloud effect anywhere completely in the caster’s control area. This AOE does not block friendly chars’ LOS. While in the AOE, friendly chars ignore movement penalties for rough terrain and can move through obstructions and other chars if they have enough movement to move completely past them."
+Veil of Mists,3,CTRL,4,-,YES,NO,"Place a 4˝ AOE cloud effect anywhere completely in the caster's control area. This AOE does not block friendly chars' LOS. While in the AOE, friendly chars ignore movement penalties for rough terrain and can move through obstructions and other chars if they have enough movement to move completely past them."
 Venom,2,SP 8,-,10,NO,YEs,Characters hit suffer the Corrosion continuous effect.
 Vision,2,6,-,-,YES,NO,"The next time target character is directly hit by an attack, he suffers no damage roll from the attack, then Vision Expires."
-Voodoo Doll,2,8,-,-,NO,YEs,Choose one of target living enemy’s aspects on his damage spiral. That aspect suffers the effects of being crippled for one round.
+Voodoo Doll,2,8,-,-,NO,YEs,Choose one of target living enemy's aspects on his damage spiral. That aspect suffers the effects of being crippled for one round.
 Voltaic Lock,4,10,*,-,NO,YES,Target steamjack cannot advance and suffers -4 DEF.  A steamjack beginning an advance within 3” of the hit steamjack cannot run or charge and can only advance directly towards it.Voltaic Lock lasts for one round.
 Wall of Fire,2,CTRL,WALL,-,YES,NO,"Place a wall template (p. 352) anywhere completely in the caster's CTRL where it does not touch a char's base, an obstruction, or an obstacle. When a char enters or ends his turn in the wall area, he suffers an unboostable  POW 12 fire damage roll and the Fire continuous effect.  Chars within the wall template gain Concealment."
-Warpath,2,SELF,CTRL,-,YES,NO,"When a character in the caster’s battlegroup that is in hisCTRL destroys one or more enemies with a melee or ranged attack during his activation, one warbeast in the caster’s battlegroup that is in his CTRL can advance up to 3˝ immediately after the attack is resolved. A warbeast can advance only once per turn as a result of Warpath."
+Warpath,2,SELF,CTRL,-,YES,NO,"When a character in the caster's battlegroup that is in hisCTRL destroys one or more enemies with a melee or ranged attack during his activation, one warbeast in the caster's battlegroup that is in his CTRL can advance up to 3˝ immediately after the attack is resolved. A warbeast can advance only once per turn as a result of Warpath."
 Watcher,3,SELF,-,-,YES,NO,"When enemy advances and ends movement within 6"" of caster, choose a character in caster's battlegroup in CTRL . That character can immediately make full advance and a normal melee or ranged attack vs that enemy with boosted attack and damage rolls. Watcher expires after the attack is resolved."
 Webbing,3,CTRL,3,-,NO,YES,Place AOE completely within CTRL. In AOE characters cannot move except to change facing. Remains in play 1 round.
 Weald Hunter,2,6,-,-,YES,NO,"Target character gains Treewalker. (A character with Treewalker ignores forests when determining LOS. While in a forest, a character with Treewalker gains +2  DEF against melee attack rolls and can advance through obstructions and other characters if he has enough movement to move completely past them.)"
 White Out,4,SELF,CTRL,-,YES,NO,"While in the Spellcaster's control area, enemy characters have their LOS reduced to 5”."
-Wild Aggression,3,6,-,-,YES,NO,"Target living warbeast in the spellcaster’s battlegroup can run, charge, or make slam or trample power attacks without being forced and gains boosted melee attack rolls."
+Wild Aggression,3,6,-,-,YES,NO,"Target living warbeast in the spellcaster's battlegroup can run, charge, or make slam or trample power attacks without being forced and gains boosted melee attack rolls."
 Wind Blast,2,CTRL,5,-,NO,NO,Place a 5” AOE anywhere completely in the spellcaster's control area.  Cloud effects overlapping the AOE expire.  Characters suffer -3 RAT while within the AOE.  The AOE remains in play for one round.
 Wind Strike,1,6,-,-,NO,YES,"This spell does not inflict damage.  An enemy directly hit by this spell is pushed 1” directly away from the sellcaster.  After the enemy is pushed, the spellcaster can advance up to 1” directly toward the pushed enemy."
 Wings of Air,2,SELF,-,-,NO,NO,Place the spellcaster anywhere completely within 5” of his current location.  Wings of Air can be cast only once per turn.
