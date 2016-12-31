@@ -40,3 +40,6 @@ Preternatural Awareness,Skilled,You gain boosted Initiative rolls and enemies ne
 Sidestep,Skilled,"When you hit with an enemy with a melee weapon, advance up to 2"".  You cannot be targeted by free strikes during this move."
 Virtuoso,Skilled,"Choose a military skill.  When making a non-AOE attack with a weapon with that skill, gain die to attack and damage and discard low die."
 Nyss Racial,,+1 on PER rolls. +3 ARM against cold damage.  -3 ARM against fire damage
+Blood Boon,Gifted,"When you destroy a living character with a melee attack, instead of gaining a feat point he can immediately cast a spell with a cost of 3 or lower without spending fury points or generating fatigue. This spell does not require a quick action."
+Savant,Savant,Can attempt to use skills untrained at a -2 to skill roll.
+Tharn Racial,,Feat: Transformation: Can transform as a full action or immediately for 1 feat point. 

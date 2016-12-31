@@ -51,3 +51,15 @@ Trollkin,Base,6,5,5,3,4,2,3,0,3
 Trollkin,Hero,8,6,7,5,5,4,4,4,4
 Trollkin,Veteran,9,6,8,6,6,5,5,6,5
 Trollkin,Epic,10,6,9,7,7,6,6,7,6
+Swamp Gobber,Base,4,6,3,4,4,3,3,0,3
+Swamp Gobber,Hero,6,7,4,5,5,5,4,0,4
+Swamp Gobber,Veteran,7,7,5,6,6,6,5,0,5
+Swamp Gobber,Epic,7,7,6,7,7,7,6,0,6
+Bogrin,Base,5,6,4,4,4,3,2,0,3
+Bogrin,Hero,7,7,5,5,5,5,4,0,4
+Bogrin,Veteran,7,7,6,6,6,6,5,0,4
+Bogrin,Epic,7,7,7,7,7,6,6,0,5
+Croak,Base,5,6,4,4,4,3,2,0,3
+Croak,Hero,7,7,5,5,5,5,4,4,4
+Croak,Veteran,7,7,6,6,6,5,5,6,6
+Croak,Epic,8,7,7,7,7,6,6,7,7

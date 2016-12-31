@@ -477,6 +477,12 @@ class Character(object):
         self.languages = self.race_table.Languages.any()
         self.height = rand_meas(self.race_table.Height.any())[self.gender]
         self.weight = rand_meas(self.race_table.Weight.any())[self.gender]
+        try:
+            self._gen_name()
+        except:
+            self.name = "UNK"
+
+    def _gen_name(self):
         given = self.data.names.Names[
             (self.data.names.Race == self.race) &
             (self.data.names.Subrace == self.subrace) &
@@ -636,8 +642,5 @@ class Character(object):
 
 if __name__ == "__main__":
 
-    #c = Character(archetype="Gifted", careers=['Warcaster', 'Cutthroat'], race="Human (Khadoran)", xp=150)
     c = Character(archetype="Skilled", careers=['Trencher', 'Ranger'], race="Human (Cygnaran)")
-    #c = Character(xp=10)
-    print c.summary()
-    #print c.to_json()
+    d = Character(race="Tharn")
