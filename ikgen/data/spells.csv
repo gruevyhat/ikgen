@@ -286,7 +286,7 @@ Storm Tossed,1,8,-,-,NO,YES,"When a enemy character is hit by Storm Tossed, he c
 Storm Wall,3,SELF,CTRL,-,NO,NO,"While in the spellcaster's control area, enemies suffer –5 RNG on their ranged attacks. When an enemy AOE ranged attack deviates from a point in the spellcaster's control area, the spellcaster's player chooses the deviation direction after the deviation distance is rolled. Storm Wall lasts for one round."
 Stranglehold,2,10,-,11,NO,YES,A character damaged by Stranglehold forfeits either its movment or action next turn.
 Stygian Abyss,3,10,-,12,NO,YES,"On Critical causes  Shadow Bind ( -3 DEF, and for 1 round can't advance except to change facing)."
-Summong Vortex,2,SELF,-,-,NO,NO,Center a 3˝ AOE cloud effect on the spellcaster. Enemies suffer –2 to attack rolls while in the AOE. Summon Vortex lasts for one round.
+Summon Vortex,2,SELF,-,-,NO,NO,Center a 3˝ AOE cloud effect on the spellcaster. Enemies suffer –2 to attack rolls while in the AOE. Summon Vortex lasts for one round.
 Sunburst,3,10,3,13,NO,YES,Blast damage from this spell only affects enemies.
 Sunder Spirit,2,10,-,12,NO,YES,A warbeast damaged by Sunder Spirit loses its animus for one round.
 Sunhammer,3,SELF,CTRL,-,YES,NO,Enemy warbeasts and warjacks that advance more than 1˝ and end their normal movement in the spellcaster's control area suffer d3 damage points.
