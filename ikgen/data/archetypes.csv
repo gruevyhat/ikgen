@@ -1,5 +1,5 @@
 Archetype,Archetype Benefit,Stat Order,p
-Gifted,"Allows access to Arcane Mechanik, Arcanist, Gun Mage, Priest, Sorcerer, Warcaster.  Grants an ARC value.","ARC, INT, PER, AGL, POI, PRW, SPD, PHY, STR",0.4
+Gifted,"Allows access to Arcane Mechanik, Arcanist, Gun Mage, Priest, Sorcerer, Warcaster.  Grants an ARC value.","ARC, INT, PER, AGL, SPD, PHY, PRW, POI, STR",0.4
 Intellectual,+1 to attack/damage in combat.  Friendly characters in CMD range also gain this bonus.,"INT, PER, POI, PRW, AGL, SPD, PHY, STR",0.3
 Mighty,Gain additional die on melee damage rolls.,"PHY, STR, PRW, SPD, POI, AGL, PER, INT",0.2
 Skilled,Gain an additional attack during your Activation Phase if you choose to attack.,"AGL, POI, PRW, SPD, PER, PHY, INT, STR",0.2
